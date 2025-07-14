@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -14,6 +15,7 @@ public interface FaceDataRepository extends JpaRepository<FaceData, Long> {
     void deleteFaceDataByName(@Param("name") String name);
 
     // 更新或插入人脸数据
+    @Transactional
     @Modifying
     @Query("UPDATE FaceData fd SET " +
             "fd.featureData = :featureData, " +

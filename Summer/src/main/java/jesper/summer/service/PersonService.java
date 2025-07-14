@@ -14,4 +14,6 @@ public interface PersonService {
 
 
     PersonResponseDTO updatePersonByName(PersonUpdateByNameDTO dto) throws BusinessException;
+
+    PersonResponseDTO getPersonDetailsByName(String name) throws BusinessException;
 }

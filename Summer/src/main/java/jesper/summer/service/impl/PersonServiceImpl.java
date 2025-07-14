@@ -3,7 +3,6 @@ package jesper.summer.service.impl;
 import jesper.summer.dto.PersonCreateDTO;
 import jesper.summer.dto.PersonResponseDTO;
 import jesper.summer.dto.PersonUpdateByNameDTO;
-import jesper.summer.dto.FaceDataDTO;
 import jesper.summer.entity.*;
 import jesper.summer.exception.BusinessException;
 import jesper.summer.repository.*;
@@ -14,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Base64;
 import java.time.LocalDateTime;
 import java.util.Objects;
+import java.util.Optional;
 
 @Service
 public class PersonServiceImpl implements PersonService {
@@ -72,6 +72,16 @@ public class PersonServiceImpl implements PersonService {
         response.setPersonId(person.getId());
         return response;
     }
+
+    @Transactional(readOnly = true)
+    public PersonResponseDTO getPersonDetailsByName(String name) throws BusinessException {
+        // 单次查询获取所有关联数据
+        Long id = personRepository.findIdByName(name)
+                .orElseThrow(() -> new BusinessException("用户不存在"));
+      //  Person person = personRepository.findByNameWithAssociations(name);
+
+        return convertToResponseDTO(Objects.requireNonNull(personRepository.findById(id).orElse(null)));
+    }
     @Override
     @Transactional
     public void deleteByName(String name) {
@@ -88,14 +98,7 @@ public class PersonServiceImpl implements PersonService {
         // 1. 验证用户存在并获取ID
         Long personId = personRepository.findIdByName(dto.getName())
                 .orElseThrow(() -> new BusinessException("用户不存在"));
-        System.out.println("personId: "+personId);
-        System.out.println("personId: "+dto.getName());
-        System.out.println("personId: "+dto.getIdCard());
-        System.out.println("personId: "+dto.getPhone());
-        System.out.println("personId: "+dto.getPosition());
-        System.out.println("personId: "+dto.getFaceData());
 
-        System.out.println("**************************");
         // 2. 更新PersonDetail（仅更新非空字段）
         personDetailRepository.updateSelectiveByPersonId(
                 personId,
@@ -105,20 +108,14 @@ public class PersonServiceImpl implements PersonService {
                 dto.getPosition(),
                 dto.getStatus()
         );
-        System.out.println("personId: "+personId);
-        System.out.println("personId: "+dto.getName());
-        System.out.println("personId: "+dto.getIdCard());
-        System.out.println("personId: "+dto.getPhone());
-        System.out.println("personId: "+dto.getPosition());
-        System.out.println("personId: "+dto.getFaceData());
 
-        System.out.println("**************************");
         // 3. 处理FaceData（存在则更新，不存在则插入）
         if (dto.getFaceData() != null) {
-            byte[] featureBytes = Base64.getDecoder().decode(dto.getFaceData().getFeatureData());
+            byte[] featureData = Base64.getDecoder().decode(dto.getFaceData().getFeatureData());
+
             int updatedRows = faceDataRepository.upsertFaceData(
                     personId,
-                    featureBytes,
+                    featureData,
                     dto.getFaceData().getImagePath(),
                     dto.getFaceData().getQualityScore(),
                     dto.getFaceData().getVersion()
@@ -133,12 +130,14 @@ public class PersonServiceImpl implements PersonService {
         FaceData faceData = faceDataRepository.findByPersonId(person.getId()).orElse(null);
 
         return PersonResponseDTO.builder()
+                .personId(person.getId())
                 .name(person.getName())
                 .gender(detail.getGender())
                 .idCard(detail.getIdCard())
                 .phone(detail.getPhone())
                 .position(detail.getPosition())
                 .status(detail.getStatus())
+                .registerTime(detail.getRegisterTime())
                 .faceData(faceData != null ?
                         new PersonResponseDTO.FaceDataDTO(
                                 Base64.getEncoder().encodeToString(faceData.getFeatureData()),

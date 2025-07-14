@@ -16,8 +16,81 @@ public class PersonResponseDTO {
     private LocalDateTime registerTime;
     private FaceDataDTO faceData;
 
+    public Long getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(Long personId) {
+        this.personId = personId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getGender() {
+        return gender;
+    }
+
+    public void setGender(Integer gender) {
+        this.gender = gender;
+    }
+
+    public String getIdCard() {
+        return idCard;
+    }
+
+    public void setIdCard(String idCard) {
+        this.idCard = idCard;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getRegisterTime() {
+        return registerTime;
+    }
+
+    public void setRegisterTime(LocalDateTime registerTime) {
+        this.registerTime = registerTime;
+    }
+
+    public FaceDataDTO getFaceData() {
+        return faceData;
+    }
+
+    public void setFaceData(FaceDataDTO faceData) {
+        this.faceData = faceData;
+    }
+
     // 静态Builder类
     public static class Builder {
+        private Long personId;
         private String name;
         private Integer gender;
         private String idCard;
@@ -25,7 +98,12 @@ public class PersonResponseDTO {
         private String position;
         private Integer status;
         private FaceDataDTO faceData;
+        private LocalDateTime registerTime;
 
+        public Builder personId(Long personId) {
+            this.personId = personId;
+            return this;
+        }
         public Builder name(String name) {
             this.name = name;
             return this;
@@ -56,9 +134,13 @@ public class PersonResponseDTO {
             this.faceData = faceData;
             return this;
         }
-
+        public Builder registerTime(LocalDateTime registerTime) {
+            this.registerTime = registerTime;
+            return this;
+        }
         public PersonResponseDTO build() {
             PersonResponseDTO dto = new PersonResponseDTO();
+            dto.setPersonId(this.personId);
             dto.setName(this.name);
             dto.setGender(this.gender);
             dto.setIdCard(this.idCard);
@@ -66,8 +148,11 @@ public class PersonResponseDTO {
             dto.setPosition(this.position);
             dto.setStatus(this.status);
             dto.setFaceData(this.faceData);
+            dto.setRegisterTime(this.registerTime);
             return dto;
         }
+
+
     }
 
     // 提供builder()入口

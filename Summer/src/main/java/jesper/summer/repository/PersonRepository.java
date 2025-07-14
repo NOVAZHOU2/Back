@@ -4,6 +4,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToOne;
 import jesper.summer.entity.Person;
 import jesper.summer.entity.PersonDetail;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -34,4 +35,9 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
     @Query("SELECT p.id FROM Person p WHERE p.name = :name")
     Optional<Long> findIdByName(@Param("name") String name);
 
+    @Query("SELECT p FROM Person p " +
+            "LEFT JOIN FETCH p.detail " +
+            "LEFT JOIN FETCH p.facedata " +
+            "WHERE p.name = :name")
+    Person findByNameWithAssociations(@Param("name") String name);
 }

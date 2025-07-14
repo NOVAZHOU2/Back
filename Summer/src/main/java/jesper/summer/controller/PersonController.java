@@ -3,6 +3,7 @@ package jesper.summer.controller;
 import jesper.summer.dto.*;
 import jesper.summer.exception.BusinessException;
 import jesper.summer.service.PersonService;
+import jesper.summer.service.impl.PersonWithDetails;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -62,10 +63,16 @@ public class PersonController {
         }
     }
 
-    @PatchMapping("/by-name")
+    @PatchMapping("/update")
     public ResponseEntity<PersonResponseDTO> updateByName(
             @Valid @RequestBody PersonUpdateByNameDTO dto
     ) throws BusinessException {
         return ResponseEntity.ok(personService.updatePersonByName(dto));
+    }
+
+    @PostMapping("/query")  // 改为POST请求
+    public ResponseEntity<PersonResponseDTO> getByName(@Valid @RequestBody PersonGetDTO request) throws BusinessException {
+        System.out.println(request.getName());
+        return ResponseEntity.ok(personService.getPersonDetailsByName(request.getName()));
     }
 }

@@ -127,22 +127,15 @@
 
   ```
   {
-      "personId": 2,
-      "name": "张三",
+      "personId": 10,
+      "name": "兔吮",
       "gender": 1,
-      "idCard": "110101199003072345",
+      "idCard": "110101109003271245",
       "phone": "13800138000",
-      "position": "学生",
+      "position": "教师",
       "status": 0,
-      "registerTime": [
-          2025,
-          7,
-          14,
-          8,
-          28,
-          25,
-          94868600
-      ]
+      "registerTime": "2025-07-14T15:25:13.02071",
+      "faceData": null
   }
   ```
 
@@ -167,18 +160,95 @@
   ```
   {
       "operation": "DELETE",
-      "targetName": "张三",
+      "targetName": "jesper",
       "statusCode": 200,
-      "message": "成功删除姓名为 [张三] 的记录",
-      "timestamp": [
-          2025,
-          7,
-          14,
-          8,
-          38,
-          5,
-          587343600
-      ]
+      "message": "成功删除姓名为 [jesper] 的记录",
+      "timestamp": "2025-07-14T11:44:02.665719"
+  }
+  ```
+
+------
+
+### 3. 修改用户
+
+- **请求方法**: PATCH
+
+- **路径**: `/persons/update`
+
+- **请求体**:
+
+  ```json
+  {
+    "name": "李四",              
+    "gender": 1,                
+    "idCard": "110101199001011234", 
+    "phone": "13800138000",    
+    "position": "工程师",       
+    "status": 1,                 
+    "faceData": {                
+      "featureData": "hell", 
+      "imagePath": "/path/to/image.jpg", 
+      "qualityScore": 95.5,     
+      "version": "v1.0"       
+    }
+  }
+  ```
+
+- **响应体（201 Created）**:
+
+  ```
+  {
+      "personId": 6,
+      "name": "李四",
+      "gender": 1,
+      "idCard": "110101199001011234",
+      "phone": "13800138000",
+      "position": "工程师",
+      "status": 1,
+      "registerTime": "2025-07-14T09:32:26",
+      "faceData": {
+          "featureData": "hell",
+          "imagePath": "/path/to/image.jpg",
+          "qualityScore": 95.5,
+          "version": "v1.0"
+      }
+  }
+  ```
+
+------
+
+### 4. 查询用户（by-name)
+
+- **请求方法**: POST
+
+- **路径**: `/persons/query`
+
+- **请求体**:
+
+  ```json
+  {
+      "name" : "李四"
+  }
+  ```
+
+- **响应体（201 Created）**:
+
+  ```
+  {
+      "personId": 6,
+      "name": "李四",
+      "gender": 1,
+      "idCard": "110101199001011234",
+      "phone": "13800138000",
+      "position": "工程师",
+      "status": 1,
+      "registerTime": "2025-07-14T09:32:26",
+      "faceData": {
+          "featureData": "hell",
+          "imagePath": "/path/to/image.jpg",
+          "qualityScore": 95.5,
+          "version": "v1.0"
+      }
   }
   ```
 

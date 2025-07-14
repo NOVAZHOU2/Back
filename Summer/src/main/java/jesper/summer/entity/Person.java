@@ -17,7 +17,19 @@ public class Person {
     @OneToOne
     @JoinColumn(name = "id", referencedColumnName = "person_id")
     private PersonDetail detail; // 字段名必须与查询语句一致
+
+    @OneToOne
+    @JoinColumn(name = "id", referencedColumnName = "person_id")
+    private FaceData facedata; // 字段名必须与查询语句一致
     // Getters and Setters
+
+    public FaceData getFacedata() {
+        return facedata;
+    }
+
+    public void setFacedata(FaceData facedata) {
+        this.facedata = facedata;
+    }
 
     public PersonDetail getDetail() {
         return detail;
