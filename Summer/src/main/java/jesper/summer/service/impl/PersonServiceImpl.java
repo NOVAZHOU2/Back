@@ -1,0 +1,152 @@
+package jesper.summer.service.impl;
+
+import jesper.summer.dto.PersonCreateDTO;
+import jesper.summer.dto.PersonResponseDTO;
+import jesper.summer.dto.PersonUpdateByNameDTO;
+import jesper.summer.dto.FaceDataDTO;
+import jesper.summer.entity.*;
+import jesper.summer.exception.BusinessException;
+import jesper.summer.repository.*;
+import jesper.summer.service.PersonService;
+import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import java.util.Base64;
+import java.time.LocalDateTime;
+import java.util.Objects;
+
+@Service
+public class PersonServiceImpl implements PersonService {
+
+    private final PersonRepository personRepository;
+    private final PersonDetailRepository personDetailRepository;
+    private final FaceDataRepository faceDataRepository;
+
+    public PersonServiceImpl(PersonRepository personRepository,
+                             PersonDetailRepository personDetailRepository,
+                             FaceDataRepository faceDataRepository) {
+        this.personRepository = personRepository;
+        this.personDetailRepository = personDetailRepository;
+        this.faceDataRepository = faceDataRepository;
+    }
+
+    @Override
+    @Transactional
+    public PersonResponseDTO createPerson(PersonCreateDTO dto) throws BusinessException {
+        // 检查身份证号是否已存在
+        if (personDetailRepository.existsByIdCard(dto.getIdCard())) {
+            throw new BusinessException("身份证号已存在");
+        }
+
+        // 检查人脸质量
+        if (dto.getFaceData().getQualityScore() < 0.8f) {
+            throw new BusinessException("人脸质量评分过低");
+        }
+
+        // 保存Person
+        Person person = new Person();
+        person.setName(dto.getName());
+        person = personRepository.save(person);
+
+        // 保存PersonDetail
+        PersonDetail detail = new PersonDetail();
+        BeanUtils.copyProperties(dto, detail);
+        detail.setPerson(person);
+        detail.setRegisterTime(LocalDateTime.now());
+        detail.setUpdateTime(LocalDateTime.now());
+        personDetailRepository.save(detail);
+
+        // 保存FaceData
+        FaceData faceData = new FaceData();
+        BeanUtils.copyProperties(dto.getFaceData(), faceData);
+        faceData.setFeatureData(
+                Base64.getDecoder().decode(dto.getFaceData().getFeatureData())
+        );
+        faceData.setPerson(person);
+        faceData.setRegisterTime(LocalDateTime.now());
+        faceDataRepository.save(faceData);
+
+        // 返回结果
+        PersonResponseDTO response = new PersonResponseDTO();
+        BeanUtils.copyProperties(detail, response);
+        response.setPersonId(person.getId());
+        return response;
+    }
+    @Override
+    @Transactional
+    public void deleteByName(String name) {
+        // 先删除关联数据
+        faceDataRepository.deleteFaceDataByName(name);
+        personDetailRepository.deleteDetailByName(name);
+
+        // 最后删除主表数据
+        personRepository.deleteByName(name);
+    }
+
+    @Override
+    public PersonResponseDTO updatePersonByName(PersonUpdateByNameDTO dto) throws BusinessException {
+        // 1. 验证用户存在并获取ID
+        Long personId = personRepository.findIdByName(dto.getName())
+                .orElseThrow(() -> new BusinessException("用户不存在"));
+        System.out.println("personId: "+personId);
+        System.out.println("personId: "+dto.getName());
+        System.out.println("personId: "+dto.getIdCard());
+        System.out.println("personId: "+dto.getPhone());
+        System.out.println("personId: "+dto.getPosition());
+        System.out.println("personId: "+dto.getFaceData());
+
+        System.out.println("**************************");
+        // 2. 更新PersonDetail（仅更新非空字段）
+        personDetailRepository.updateSelectiveByPersonId(
+                personId,
+                dto.getGender(),
+                dto.getIdCard(),
+                dto.getPhone(),
+                dto.getPosition(),
+                dto.getStatus()
+        );
+        System.out.println("personId: "+personId);
+        System.out.println("personId: "+dto.getName());
+        System.out.println("personId: "+dto.getIdCard());
+        System.out.println("personId: "+dto.getPhone());
+        System.out.println("personId: "+dto.getPosition());
+        System.out.println("personId: "+dto.getFaceData());
+
+        System.out.println("**************************");
+        // 3. 处理FaceData（存在则更新，不存在则插入）
+        if (dto.getFaceData() != null) {
+            byte[] featureBytes = Base64.getDecoder().decode(dto.getFaceData().getFeatureData());
+            int updatedRows = faceDataRepository.upsertFaceData(
+                    personId,
+                    featureBytes,
+                    dto.getFaceData().getImagePath(),
+                    dto.getFaceData().getQualityScore(),
+                    dto.getFaceData().getVersion()
+            );
+        }
+
+        return convertToResponseDTO(Objects.requireNonNull(personRepository.findById(personId).orElse(null)));
+    }
+
+    private PersonResponseDTO convertToResponseDTO(Person person) {
+        PersonDetail detail = person.getDetail();
+        FaceData faceData = faceDataRepository.findByPersonId(person.getId()).orElse(null);
+
+        return PersonResponseDTO.builder()
+                .name(person.getName())
+                .gender(detail.getGender())
+                .idCard(detail.getIdCard())
+                .phone(detail.getPhone())
+                .position(detail.getPosition())
+                .status(detail.getStatus())
+                .faceData(faceData != null ?
+                        new PersonResponseDTO.FaceDataDTO(
+                                Base64.getEncoder().encodeToString(faceData.getFeatureData()),
+                                faceData.getImagePath(),
+                                faceData.getQualityScore(),
+                                faceData.getVersion()
+                        ) : null
+                )
+                .build();
+    }
+}
