@@ -34,13 +34,13 @@
 
 ### 3. **face_data表（人脸特征表）**
 
-|    字段名     |     类型     | 是否为空 |      默认值       |            说明            |      |
-| :-----------: | :----------: | :------: | :---------------: | :------------------------: | :--: |
-|   person_id   |    BIGINT    | NOT NULL |         -         |  关联人员ID，等效user_id   |      |
-|  face_token   | VARCHAR(255) |   YES    |       NULL        |   人脸图片唯一标识token    |      |
-|   group_id    | VARCHAR(255) |   YES    |       NULL        |          分组信息          |      |
-|    log_id     | VARCHAR(255) |   YES    |       NULL        | 请求标识码（随机数，唯一） |      |
-| register_time |   DATETIME   |   YES    | CURRENT_TIMESTAMP |          注册时间          |      |
+|    字段名     |     类型     | 是否为空 |      默认值       | 约束        |            说明            |
+| :-----------: | :----------: | :------: | :---------------: | ----------- | :------------------------: |
+|   person_id   |    BIGINT    | NOT NULL |         -         | FOREIGN KEY |  关联人员ID，等效user_id   |
+|  face_token   | VARCHAR(255) |   YES    |       NULL        | -           |   人脸图片唯一标识token    |
+|   group_id    | VARCHAR(255) |   YES    |       NULL        | -           |          分组信息          |
+|    log_id     | VARCHAR(255) |   YES    |       NULL        | -           | 请求标识码（随机数，唯一） |
+| register_time |   DATETIME   |   YES    | CURRENT_TIMESTAMP | -           |          注册时间          |
 
 ------
 
@@ -64,6 +64,7 @@
 |    字段名     |     类型     | 是否为空 |      默认值       |            约束             |             说明              |
 | :-----------: | :----------: | :------: | :---------------: | :-------------------------: | :---------------------------: |
 |  **log_id**   |    BIGINT    |    NO    |         -         | PRIMARY KEY, AUTO_INCREMENT |       日志主键（新增）        |
+|   device_id   | VARCHAR(36)  |    NO    |         -         |         FOREIGN KEY         |            设备ID             |
 |   person_id   |    BIGINT    |   YES    |       NULL        |         FOREIGN KEY         |        识别到的人员ID         |
 |  access_time  |   DATETIME   |   YES    | CURRENT_TIMESTAMP |              -              |           通行时间            |
 |  access_type  |   TINYINT    |   YES    |       NULL        |              -              | 识别方式:1-人脸,2-刷卡,3-混合 |
