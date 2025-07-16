@@ -30,22 +30,17 @@
 |  update_time  |  DATETIME   |   YES    | CURRENT_TIMESTAMP ON UPDATE |      -      |       更新时间        |
 |    status     |   TINYINT   |   YES    |              1              |      -      | 状态:0-禁止,1-可通行  |
 
-**索引**：`idx_name`（姓名索引）
-
 ------
 
 ### 3. **face_data表（人脸特征表）**
 
-|    字段名     |     类型     | 是否为空 |      默认值       |    约束     |       说明        |
-| :-----------: | :----------: | :------: | :---------------: | :---------: | :---------------: |
-|   person_id   |    BIGINT    | NOT NULL |         -         | FOREIGN KEY | 关联person表的id  |
-| feature_data  |     BLOB     | NOT NULL |         -         |      -      |   人脸特征数据    |
-|  image_path   | VARCHAR(255) |   YES    |       NULL        |      -      |   人脸图片路径    |
-| register_time |   DATETIME   |   YES    | CURRENT_TIMESTAMP |      -      |     注册时间      |
-| quality_score |    FLOAT     |   YES    |       NULL        |      -      | 人脸质量评分(0-1) |
-|    version    | VARCHAR(20)  |   YES    |       NULL        |      -      | 特征提取算法版本  |
-
-**索引**：`idx_person`（人员ID索引）
+|    字段名     |     类型     | 是否为空 |      默认值       |            说明            |      |
+| :-----------: | :----------: | :------: | :---------------: | :------------------------: | :--: |
+|   person_id   |    BIGINT    | NOT NULL |         -         |  关联人员ID，等效user_id   |      |
+|  face_token   | VARCHAR(255) |   YES    |       NULL        |   人脸图片唯一标识token    |      |
+|   group_id    | VARCHAR(255) |   YES    |       NULL        |          分组信息          |      |
+|    log_id     | VARCHAR(255) |   YES    |       NULL        | 请求标识码（随机数，唯一） |      |
+| register_time |   DATETIME   |   YES    | CURRENT_TIMESTAMP |          注册时间          |      |
 
 ------
 
