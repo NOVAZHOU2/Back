@@ -2,7 +2,12 @@ package jesper.summer.entity;
 
 
 import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+
+
+
 @Entity
 @Table(name = "person")
 public class Person {
@@ -16,10 +21,12 @@ public class Person {
     // 正确关联PersonDetail（假设通过person_id外键）
     @OneToOne
     @JoinColumn(name = "id", referencedColumnName = "person_id")
+    @JsonIgnore
     private PersonDetail detail; // 字段名必须与查询语句一致
 
     @OneToOne
     @JoinColumn(name = "id", referencedColumnName = "person_id")
+    @JsonIgnore
     private FaceData facedata; // 字段名必须与查询语句一致
     // Getters and Setters
 

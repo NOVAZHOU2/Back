@@ -1,5 +1,6 @@
 package jesper.summer.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jesper.summer.entity.Person;
 
 import jakarta.persistence.*;
@@ -8,9 +9,9 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "face_data")
 public class FaceData {
+
     @Id
     @Column(name = "person_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // MySQL 自增
     private Long personId;
 
     @Lob
@@ -26,10 +27,10 @@ public class FaceData {
     @Column(name = "log_id")
     private Long logId;
 
-
     @OneToOne
     @MapsId
     @JoinColumn(name = "person_id")
+    @JsonIgnore
     private Person person;
 
     // Getters and Setters
@@ -83,4 +84,5 @@ public class FaceData {
     public void setPerson(Person person) {
         this.person = person;
     }
+
 }

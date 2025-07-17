@@ -30,4 +30,8 @@ public interface FaceDataRepository extends JpaRepository<FaceData, Long> {
     );
 
     Optional<FaceData> findByPersonId(Long personId);
+
+    FaceData findByFaceToken(String faceToken);
+    void deleteByFaceToken(String faceToken);
+
 }
