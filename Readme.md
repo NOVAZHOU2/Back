@@ -111,16 +111,13 @@
     "position": "教师",
     "status": 0,
     "faceData": {
-      "faceToken": "12345",
-      "groupId": "1",
-      "logId":1
     }
   }
   ```
   
 - **响应体（201 Created）**:
 
-  ```
+  ```json
   {
       "personId": 14,
       "name": "兔吮2",
@@ -131,9 +128,6 @@
       "status": 0,
       "registerTime": "2025-07-14T17:15:24.5033405",
       "faceData": {
-          "faceToken": "12345",
-          "groupId": "1",
-          "logId": 1
       }
   }
   ```
@@ -156,7 +150,7 @@
 
 - **响应体（20）**:
 
-  ```
+  ```json
   {
       "operation": "DELETE",
       "targetName": "兔吮2",
@@ -185,16 +179,13 @@
     "position": "教师",
     "status": 0,
     "faceData": {
-      "faceToken": "54321",
-      "groupId": "1",
-      "logId":1
     }
   }
   ```
-
+  
 - **响应体（20）**:
 
-  ```
+  ```json
   {
       "personId": 13,
       "name": "兔吮1",
@@ -205,9 +196,6 @@
       "status": 0,
       "registerTime": "2025-07-14T17:02:15",
       "faceData": {
-          "faceToken": "54321",
-          "groupId": "1",
-          "logId": 1
       }
   }
   ```
@@ -230,7 +218,7 @@
 
 - **响应体（200）**:
 
-  ```
+  ```json
   {
       "personId": 13,
       "name": "兔吮1",
@@ -266,7 +254,7 @@
 
 - **响应体（200）**:
 
-  ```
+  ```json
   {
       "content": [
           {
@@ -351,7 +339,7 @@
 
 - **响应体（200）**:
 
-  ```
+  ```json
   {
       "deviceId": "DEV-001",
       "deviceName": "南门入口闸机",
@@ -382,7 +370,7 @@
 
 - **响应体（200）**:
 
-  ```
+  ```json
   {
       "deviceId": "DEV-001",
       "code": 200,
@@ -409,7 +397,7 @@
 
 - **响应体（200）**:
 
-  ```
+  ```json
   {
       "deviceId": "DEV-001",
       "deviceName": "南门入口闸机",
@@ -438,7 +426,7 @@
 
 - **响应体（200）**:
 
-  ```
+  ```json
   [
       {
           "deviceId": "DEV-001",
@@ -488,7 +476,7 @@
 
 - **响应体（200）**:
 
-  ```
+  ```json
   {
       "deviceId": "DEV-002",
       "deviceName": "入口闸机",
@@ -525,7 +513,7 @@
 
 - **响应体（200）**:
 
-  ```
+  ```json
   {
       "logId": 2,
       "personId": 12,
@@ -557,7 +545,7 @@
 
 - **响应体（200）**:
 
-  ```
+  ```json
   [
       {
           "logId": 2,
@@ -591,7 +579,7 @@
 
 - **响应体（200）**:
 
-  ```
+  ```json
   //日志存在时：
   	删除成功
   //日志不存在时：
@@ -600,4 +588,138 @@
 
 ------
 
-### 
+### 14. 录入人脸数据
+
+- **请求方法**: POST
+
+- **路径**: `/recognize/register`
+
+- **请求体**:
+
+  ```json
+  //Params:
+  	personId:12
+  	groupId:1
+  	userInfo:jesper
+  //formdata:
+  	file:photo.png
+  ```
+
+- **响应体（200）**:
+
+  ```json
+  {
+      "result": {
+          "face_token": "bbdb3931aa2e5d1955d648128dcd7fe9",
+          "location": {
+              "top": 1312.51,
+              "left": 251.16,
+              "rotation": 0,
+              "width": 988,
+              "height": 1019
+          }
+      },
+      "log_id": 3744678848,
+      "error_msg": "SUCCESS",
+      "cached": 0,
+      "error_code": 0,
+      "timestamp": 1752721429
+  }
+  ```
+
+------
+
+### 15. 删除人脸数据
+
+- **请求方法**: DELETE
+
+- **路径**: `/recognize/delete`
+
+- **请求体**:
+
+  ```json
+  //Params:
+  	personId:24
+  ```
+
+- **响应体（200）**:
+
+  ```json
+  {
+      "result": true,
+      "log_id": 3167015145,
+      "error_msg": "SUCCESS",
+      "cached": 0,
+      "error_code": 0,
+      "timestamp": 1752721472
+  }
+  ```
+
+------
+
+### 16. 修改人脸数据
+
+- **请求方法**: PUT
+
+- **路径**: `/recognize/update`
+
+- **请求体**:
+
+  ```json
+  //Params:
+  	personId:24
+  	groupId:2
+  	userInfo:jesper2
+  //formdata:
+  	file:photo.png
+  ```
+
+- **响应体（200）**:
+
+  ```json
+  {
+      "result": {
+          "face_token": "bbdb3931aa2e5d1955d648128dcd7fe9",
+          "location": {
+              "top": 1312.56,
+              "left": 251.17,
+              "rotation": 0,
+              "width": 988,
+              "height": 1019
+          }
+      },
+      "log_id": 1734166057,
+      "error_msg": "SUCCESS",
+      "cached": 0,
+      "error_code": 0,
+      "timestamp": 1752721736
+  }
+  ```
+
+------
+
+### 17. 人脸识别
+
+- **请求方法**: GET
+
+- **路径**: `/recognize/recognize`
+
+- **请求体**:
+
+  ```json
+  //Params:
+  	groupIdList: 1,2,3
+  //formdata:
+  	file:photo.png
+  ```
+
+- **响应体（200）**:
+
+  ```json
+  {
+      "id": 12,
+      "name": "兔吮"
+  }
+  ```
+
+------

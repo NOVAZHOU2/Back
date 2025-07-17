@@ -53,22 +53,13 @@ public class PersonServiceImpl implements PersonService {
         detail.setUpdateTime(LocalDateTime.now());
         personDetailRepository.save(detail);
 
-        // 保存FaceData
-        FaceData faceData = new FaceData();
-        BeanUtils.copyProperties(dto.getFaceData(), faceData);
 
-
-        faceData.setPerson(person);
-        System.out.println();
-        faceData.setRegisterTime(LocalDateTime.now());
-        System.out.println(faceData);
-        faceDataRepository.save(faceData);
 
         // 返回结果
         PersonResponseDTO response = new PersonResponseDTO();
         BeanUtils.copyProperties(detail, response);
         response.setPersonId(person.getId());
-        response.setFaceData(new PersonResponseDTO.FaceDataDTO(faceData.getFaceToken(), faceData.getGroupId(), faceData.getLogId()));
+       // response.setFaceData(new PersonResponseDTO.FaceDataDTO(faceData.getFaceToken(), faceData.getGroupId(), faceData.getLogId()));
         return response;
     }
 
