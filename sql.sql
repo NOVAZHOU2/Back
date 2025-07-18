@@ -41,10 +41,13 @@ CREATE TABLE access_device (
                                status TINYINT NOT NULL DEFAULT 1 COMMENT '状态:0-离线,1-在线,2-故障',
                                create_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
                                update_time DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-                               remark VARCHAR(200) COMMENT '备注'
+                               remark VARCHAR(200) COMMENT '备注',
+                               longitude DECIMAL(10,6) COMMENT '经度',
+                               latitude DECIMAL(10,6) COMMENT '纬度'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='门禁设备表';
 
 CREATE TABLE access_log (
+                            log_id BIGINT AUTO_INCREMENT PRIMARY KEY AUTO_INCREMENT,
                             person_id BIGINT COMMENT '识别到的人员ID',
                             access_time DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '通行时间',
                             access_type TINYINT COMMENT '识别方式:1-人脸,2-刷卡,3-混合',

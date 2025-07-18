@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 public interface PersonService {
     @Transactional
     PersonResponseDTO createPerson(PersonCreateDTO dto) throws BusinessException;
@@ -20,4 +22,6 @@ public interface PersonService {
     PersonResponseDTO getPersonDetailsByName(String name) throws BusinessException;
 
     Page<PersonResponseDTO> getAllPersons(Pageable pageable);
+
+    int batchDeleteByName(List<String> names) throws BusinessException;
 }

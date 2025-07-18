@@ -13,4 +13,6 @@ public interface AccessDeviceService {
     List<AccessDevice> getAll();
     AccessDevice update(AccessDevice device);
     void delete(String deviceId);
+
+    int batchDelete(List<String> deviceIds);
 }

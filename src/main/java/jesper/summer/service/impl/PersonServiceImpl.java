@@ -13,9 +13,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import java.util.Base64;
+import org.springframework.util.CollectionUtils;
+
+import java.util.*;
 import java.time.LocalDateTime;
-import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Service
 public class PersonServiceImpl implements PersonService {
@@ -31,7 +33,24 @@ public class PersonServiceImpl implements PersonService {
         this.personDetailRepository = personDetailRepository;
         this.faceDataRepository = faceDataRepository;
     }
+    @Override
+    @Transactional(rollbackFor = Exception.class)
+    public int batchDeleteByName(List<String> names) throws BusinessException {
+        if (CollectionUtils.isEmpty(names)) {
+            throw new BusinessException("姓名列表不能为空");
+        }
 
+        int totalDeleted = 0;
+        for (String name : names) {
+            // 1. 查询主表ID（避免重复查询）
+            faceDataRepository.deleteFaceDataByName(name);
+            personDetailRepository.deleteDetailByName(name);
+
+            // 最后删除主表数据
+            personRepository.deleteByName(name);
+        }
+        return totalDeleted;
+    }
     @Override
     @Transactional
     public PersonResponseDTO createPerson(PersonCreateDTO dto) throws BusinessException {

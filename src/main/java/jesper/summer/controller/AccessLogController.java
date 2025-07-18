@@ -17,6 +17,7 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/logs")
@@ -29,7 +30,22 @@ public class AccessLogController {
         System.out.println(log);
         return service.create(log);
     }
+    @PostMapping("/batch")
+    public ResponseEntity<Map<String, Object>> batchDeleteLogs(
+            @RequestBody LogBatchDeleteRequest request  // 封装为对象
+    ) throws BusinessException {
+        if (request.getLogIds() == null || request.getLogIds().isEmpty()) {
+            throw new BusinessException("日志ID列表不能为空");
+        }
+        int deletedCount = service.batchDelete(request.getLogIds());
 
+        return ResponseEntity.ok(Map.of(
+                "code", HttpStatus.OK.value(),
+                "message", "成功删除 " + deletedCount + " 条日志",
+                "logIds", request.getLogIds(),
+                "timestamp", LocalDateTime.now()
+        ));
+    }
     @GetMapping
     public List<AccessLog> getAll() {
         return service.getAll();
@@ -47,5 +63,9 @@ public class AccessLogController {
         @NotNull(message = "日志ID不能为空")
         private Long logId;
     }
-
+    @Data  // Lombok注解，自动生成getter/setter
+    public static class LogBatchDeleteRequest {
+        @NotNull(message = "logIds不能为空")
+        private List<Long> logIds;
+    }
 }

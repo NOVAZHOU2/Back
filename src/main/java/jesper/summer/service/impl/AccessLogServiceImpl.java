@@ -24,6 +24,18 @@ public class AccessLogServiceImpl implements AccessLogService {
         return repository.findAll();
     }
 
+    public int batchDelete(List<Long> logIds) {
+        // 批量删除（物理删除）
+        for(Long logId : logIds){
+            repository.deleteById(logId);
+        }
+        return logIds.size();
+
+        /* 若需逻辑删除，可改为：
+        List<AccessLog> logs = logRepository.findAllById(logIds);
+        logs.forEach(log -> log.setDeleted(true));
+        return logRepository.saveAll(logs).size(); */
+    }
     @Override
     public String delete(Long logId) {
         if (!repository.existsById(logId)) {

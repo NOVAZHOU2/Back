@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/persons")
@@ -90,5 +91,40 @@ public class PersonController {
         Pageable pageable = PageRequest.of(page, size, Sort.by(sort));
         System.out.println(pageable);
         return ResponseEntity.ok(personService.getAllPersons(pageable));
+    }
+
+    @DeleteMapping("/batch-by-name")
+    public ResponseEntity<BatchOperationResultDTO> batchDeleteByName(
+            @Valid @RequestBody BatchPersonDeleteDTO request) {
+
+        List<String> names = request.getNames();
+        BatchOperationResultDTO response;
+
+        try {
+            int successCount = personService.batchDeleteByName(names);
+
+            response = new BatchOperationResultDTO(
+                    "BATCH_DELETE",
+                    names,
+                    HttpStatus.OK.value(),
+                    String.format("成功删除 %d/%d 条记录", names.size(), names.size()),
+                    LocalDateTime.now(),
+                    successCount,
+                    names.size() - successCount
+            );
+            return ResponseEntity.ok(response);
+
+        } catch (Exception e) {
+            response = new BatchOperationResultDTO(
+                    "BATCH_DELETE",
+                    names,
+                    HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                    "系统错误: 批量删除操作未完成",
+                    LocalDateTime.now(),
+                    0,
+                    names.size()
+            );
+            return ResponseEntity.internalServerError().body(response);
+        }
     }
 }

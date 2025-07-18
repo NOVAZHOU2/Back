@@ -46,16 +46,18 @@
 
 ### 4. **access_device表（门禁设备表）**
 
-|   字段名    |     类型     | 是否为空 |           默认值            |    约束     |           说明            |
-| :---------: | :----------: | :------: | :-------------------------: | :---------: | :-----------------------: |
-|  device_id  | VARCHAR(36)  | NOT NULL |              -              | PRIMARY KEY |       设备唯一标识        |
-| device_name | VARCHAR(100) | NOT NULL |              -              |      -      |         设备名称          |
-| device_type |   TINYINT    | NOT NULL |              -              |      -      | 类型:1-入口,2-出口,3-双向 |
-|  location   | VARCHAR(200) | NOT NULL |              -              |      -      |         安装位置          |
-|   status    |   TINYINT    | NOT NULL |              1              |      -      | 状态:0-离线,1-在线,2-故障 |
-| create_time |   DATETIME   | NOT NULL |      CURRENT_TIMESTAMP      |      -      |         创建时间          |
-| update_time |   DATETIME   | NOT NULL | CURRENT_TIMESTAMP ON UPDATE |      -      |       最后更新时间        |
-|   remark    | VARCHAR(200) |   YES    |            NULL             |      -      |           备注            |
+|   字段名    |     类型      | 是否为空 |           默认值            |    约束     |           说明            |
+| :---------: | :-----------: | :------: | :-------------------------: | :---------: | :-----------------------: |
+|  device_id  |  VARCHAR(36)  | NOT NULL |              -              | PRIMARY KEY |       设备唯一标识        |
+| device_name | VARCHAR(100)  | NOT NULL |              -              |      -      |         设备名称          |
+| device_type |    TINYINT    | NOT NULL |              -              |      -      | 类型:1-入口,2-出口,3-双向 |
+|  location   | VARCHAR(200)  | NOT NULL |              -              |      -      |         安装位置          |
+|   status    |    TINYINT    | NOT NULL |              1              |      -      | 状态:0-离线,1-在线,2-故障 |
+| create_time |   DATETIME    | NOT NULL |      CURRENT_TIMESTAMP      |      -      |         创建时间          |
+| update_time |   DATETIME    | NOT NULL | CURRENT_TIMESTAMP ON UPDATE |      -      |       最后更新时间        |
+|   remark    | VARCHAR(200)  |   YES    |            NULL             |      -      |           备注            |
+|  longitude  | DECIMAL(10,6) |   YES    |            NULL             |      -      |           经度            |
+|  latitude   | DECIMAL(10,6) |   YES    |            NULL             |      -      |           纬度            |
 
 ------
 
@@ -328,27 +330,32 @@
 
   ```json
   {
-    "deviceId": "DEV-001",
+    "deviceId": "DEV-002",
     "deviceName": "南门入口闸机",
     "deviceType": 1,
     "location": "科技园南门主通道",
     "status": 1,
-    "remark": "2025年新安装设备"
+    "remark": "2025年新安装设备",
+    "longitude":1.1,
+    "latitude":1.1
   }
+  
   ```
 
 - **响应体（200）**:
 
   ```json
   {
-      "deviceId": "DEV-001",
+      "deviceId": "DEV-002",
       "deviceName": "南门入口闸机",
       "deviceType": 1,
       "location": "科技园南门主通道",
       "status": 1,
-      "createTime": "2025-07-16T09:55:56.9071706",
-      "updateTime": "2025-07-16T09:55:56.9071706",
-      "remark": "2025年新安装设备"
+      "createTime": "2025-07-18T15:22:19.247795",
+      "updateTime": "2025-07-18T15:22:19.247795",
+      "remark": "2025年新安装设备",
+      "longitude": 1.1,
+      "latitude": 1.1
   }
   ```
 
@@ -372,10 +379,10 @@
 
   ```json
   {
-      "deviceId": "DEV-001",
       "code": 200,
-      "timestamp": "2025-07-16T10:06:02.8201593",
-      "message": "设备删除成功"
+      "deviceId": "DEV-002",
+      "message": "设备删除成功",
+      "timestamp": "2025-07-18T15:24:35.2900179"
   }
   ```
 
@@ -399,14 +406,16 @@
 
   ```json
   {
-      "deviceId": "DEV-001",
-      "deviceName": "南门入口闸机",
+      "deviceId": "DEV-002",
+      "deviceName": "入口闸机",
       "deviceType": 1,
       "location": "科技园南门主通道",
       "status": 1,
-      "createTime": "2025-07-16T10:12:18",
-      "updateTime": "2025-07-16T10:12:18",
-      "remark": "2025年新安装设备"
+      "createTime": "2025-07-18T15:22:19",
+      "updateTime": "2025-07-18T15:23:08",
+      "remark": "2025年新安装设备",
+      "longitude": 1.2,
+      "latitude": 1.2
   }
   ```
 
@@ -429,24 +438,16 @@
   ```json
   [
       {
-          "deviceId": "DEV-001",
-          "deviceName": "南门入口闸机",
+          "deviceId": "DEV-002",
+          "deviceName": "入口闸机",
           "deviceType": 1,
           "location": "科技园南门主通道",
           "status": 1,
-          "createTime": "2025-07-16T10:12:18",
-          "updateTime": "2025-07-16T10:12:18",
-          "remark": "2025年新安装设备"
-      },
-      {
-          "deviceId": "DEV-002",
-          "deviceName": "西门入口闸机",
-          "deviceType": 1,
-          "location": "科技园西门主通道",
-          "status": 1,
-          "createTime": "2025-07-16T10:14:21",
-          "updateTime": "2025-07-16T10:14:21",
-          "remark": "2024年安装设备"
+          "createTime": "2025-07-18T15:22:19",
+          "updateTime": "2025-07-18T15:23:08",
+          "remark": "2025年新安装设备",
+          "longitude": 1.2,
+          "latitude": 1.2
       }
   ]
   ```
@@ -455,7 +456,7 @@
 
 ### 10. 更新设备信息
 
-- **请求方法**: UPDATE
+- **请求方法**: PUT
 
 - **路径**: `/devices`
 
@@ -463,14 +464,16 @@
 
   ```json
   {
-      "deviceId": "DEV-002",//主键不支持修改
+      "deviceId": "DEV-002",
       "deviceName": "入口闸机",
       "deviceType": 1,
       "location": "科技园南门主通道",
       "status": 1,
       "createTime": "2025-07-16T09:55:56.9071706",
       "updateTime": "2025-07-16T09:55:56.9071706",
-      "remark": "2025年新安装设备"
+      "remark": "2025年新安装设备",
+      "longitude":1.2,
+      "latitude":1.2
   }
   ```
 
@@ -484,8 +487,10 @@
       "location": "科技园南门主通道",
       "status": 1,
       "createTime": "2025-07-16T09:55:56.9071706",
-      "updateTime": "2025-07-16T10:20:04.4166138",
-      "remark": "2025年新安装设备"
+      "updateTime": "2025-07-18T15:23:07.9462601",
+      "remark": "2025年新安装设备",
+      "longitude": 1.2,
+      "latitude": 1.2
   }
   ```
 
@@ -723,3 +728,101 @@
   ```
 
 ------
+
+### 18. 用户信息批量删除
+
+- **请求方法**: DELETE
+
+- **路径**: `/persons/batch-by-name`
+
+- **请求体**:
+
+  ```json
+  {
+      "names":["兔吮7","兔吮8"]
+  }
+  ```
+
+- **响应体（200）**:
+
+  ```json
+  {
+      "operation": "BATCH_DELETE",
+      "targetNames": [
+          "兔吮7",
+          "兔吮8"
+      ],
+      "statusCode": 200,
+      "message": "成功删除 2/2 条记录",
+      "timestamp": "2025-07-18T11:50:03.828195",
+      "successCount": 0,
+      "failureCount": 2
+  }
+  ```
+
+------
+
+### 19. 设备信息批量删除
+
+- **请求方法**: DELETE
+
+- **路径**: `/devices/batch`
+
+- **请求体**:
+
+  ```json
+  {
+      "deviceIds": ["DEV-002", "DEV-100","DEV-200"]
+  }
+  ```
+
+- **响应体（200）**:
+
+  ```json
+  {
+      "code": 200,
+      "timestamp": "2025-07-18T16:03:21.2305083",
+      "message": "成功删除 3 台设备",
+      "data": {
+          "deviceIds": [
+              "DEV-002",
+              "DEV-100",
+              "DEV-200"
+          ]
+      }
+  }
+  ```
+
+------
+
+### 20. 日志信息批量删除
+
+- **请求方法**: POST
+
+- **路径**: `/logs/batch`
+
+- **请求体**:
+
+  ```json
+  {
+      "logIds": [13, 14, 15]
+  }
+  ```
+
+- **响应体（200）**:
+
+  ```json
+  {
+      "logIds": [
+          13,
+          14,
+          15
+      ],
+      "code": 200,
+      "timestamp": "2025-07-18T15:58:22.4109521",
+      "message": "成功删除 3 条日志"
+  }
+  ```
+
+------
+

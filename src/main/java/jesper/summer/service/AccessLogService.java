@@ -8,4 +8,6 @@ public interface AccessLogService {
     AccessLog create(AccessLog log);
     List<AccessLog> getAll();
     String delete(Long logId);
+
+    int batchDelete(List<Long> logIds);
 }
