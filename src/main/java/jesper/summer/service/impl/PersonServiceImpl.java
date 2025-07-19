@@ -124,7 +124,8 @@ public class PersonServiceImpl implements PersonService {
                     personId,
                     dto.getFaceData().getFaceToken(),
                     dto.getFaceData().getGroupId(),
-                    dto.getFaceData().getLogId()
+                    dto.getFaceData().getLogId(),
+                    dto.getFaceData().getFaceUrl()
             );
         }
         return convertToResponseDTO(Objects.requireNonNull(personRepository.findById(personId).orElse(null)));
@@ -153,7 +154,8 @@ public class PersonServiceImpl implements PersonService {
                         new PersonResponseDTO.FaceDataDTO(
                                 faceData.getFaceToken(),
                                 faceData.getGroupId(),
-                                faceData.getLogId()
+                                faceData.getLogId(),
+                                faceData.getFaceUrl()
                         ) : null
                 )
                 .build();

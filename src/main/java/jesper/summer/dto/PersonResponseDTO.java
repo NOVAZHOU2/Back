@@ -166,11 +166,13 @@ public class PersonResponseDTO {
         private String faceToken;
         private String groupId;
         private Long logId;
+        private String faceUrl;
 
-        public FaceDataDTO(String faceToken, String groupId, Long logId) {
+        public FaceDataDTO(String faceToken, String groupId, Long logId,String faceUrl) {
             this.faceToken = faceToken;
             this.groupId = groupId;
             this.logId = logId;
+            this.faceUrl = faceUrl;
         }
     }
 }

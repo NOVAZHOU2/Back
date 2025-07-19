@@ -23,12 +23,12 @@ CREATE TABLE person_detail (
 
 
 CREATE TABLE face_data (
-                           person_id BIGINT NOT NULL COMMENT '关联人员ID',
-                           feature_data BLOB NOT NULL COMMENT '人脸特征数据',
-                           image_path VARCHAR(255) COMMENT '人脸图片路径',
+                           person_id BIGINT NOT NULL COMMENT '关联人员ID,等效user_id',
+                           face_token VARCHAR(255) COMMENT '人脸图片token',
+                           group_id VARCHAR(255) COMMENT '分组信息',
+                           log_id VARCHAR(255) COMMENT '请求标识码，随机数，唯一',
                            register_time DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '注册时间',
-                           quality_score FLOAT COMMENT '人脸质量评分(0-1)',
-                           version VARCHAR(20) COMMENT '特征提取算法版本',
+                           face_url VARCHAR(255) COMMENT '人脸图片URL',
                            FOREIGN KEY (person_id) REFERENCES person(id),
                            INDEX idx_person (person_id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='人脸特征表';

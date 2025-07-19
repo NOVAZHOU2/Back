@@ -40,6 +40,7 @@
 |  face_token   | VARCHAR(255) |   YES    |       NULL        | -           |   人脸图片唯一标识token    |
 |   group_id    | VARCHAR(255) |   YES    |       NULL        | -           |          分组信息          |
 |    log_id     | VARCHAR(255) |   YES    |       NULL        | -           | 请求标识码（随机数，唯一） |
+|   face_url    | VARCHAR(255) |   YES    |       NULL        | -           |          图片路径          |
 | register_time |   DATETIME   |   YES    | CURRENT_TIMESTAMP | -           |          注册时间          |
 
 ------
@@ -233,7 +234,8 @@
       "faceData": {
           "faceToken": "54321",
           "groupId": "1",
-          "logId": 1
+          "logId": 1,
+           "faceUrl": "E:\\Desktop"
       }
   }
   ```
@@ -260,33 +262,19 @@
   {
       "content": [
           {
-              "personId": 12,
-              "name": "兔吮",
-              "gender": 1,
-              "idCard": "110101109012271245",
-              "phone": "13800138000",
-              "position": "教师",
-              "status": 0,
-              "registerTime": "2025-07-14T16:52:46",
-              "faceData": {
-                  "faceToken": "12345",
-                  "groupId": "1",
-                  "logId": 1
-              }
-          },
-          {
-              "personId": 13,
-              "name": "兔吮1",
+              "personId": 1,
+              "name": "兔吮2",
               "gender": 1,
               "idCard": "210101109012271125",
               "phone": "13800138000",
               "position": "教师",
               "status": 0,
-              "registerTime": "2025-07-14T17:02:15",
+              "registerTime": "2025-07-19T16:37:49",
               "faceData": {
-                  "faceToken": "54321",
-                  "groupId": "1",
-                  "logId": 1
+                  "faceToken": "bbdb3931aa2e5d1955d648128dcd7fe9",
+                  "groupId": "2",
+                  "logId": 3092390589,
+                  "faceUrl": "E:\\Desktop"
               }
           }
       ],
@@ -303,8 +291,8 @@
           "unpaged": false
       },
       "last": true,
-      "totalElements": 2,
       "totalPages": 1,
+      "totalElements": 1,
       "size": 10,
       "number": 0,
       "sort": {
@@ -313,7 +301,7 @@
           "unsorted": false
       },
       "first": true,
-      "numberOfElements": 2,
+      "numberOfElements": 1,
       "empty": false
   }
   ```
@@ -605,6 +593,7 @@
   //Params:
   	personId:12
   	groupId:1
+  	faceUrl:E:\Desktop\photo.jpg
   	userInfo:jesper
   //formdata:
   	file:photo.png

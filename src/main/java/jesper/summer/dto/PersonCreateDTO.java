@@ -73,6 +73,15 @@ public class PersonCreateDTO {
         private String faceToken; // Base64编码
         private Long logId;
         private String groupId;
+        private String faceUrl;
+
+        public String getFaceUrl() {
+            return faceUrl;
+        }
+
+        public void setFaceUrl(String faceUrl) {
+            this.faceUrl = faceUrl;
+        }
 
         public String getFaceToken() {
             return faceToken;

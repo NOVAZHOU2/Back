@@ -20,9 +20,11 @@ public class FaceDataDTO {
     @NotBlank(message = "groupId不能为空")
     private String groupId;
 
-    @NotBlank(message = "groupId不能为空")
+    @NotBlank(message = "logId不能为空")
     private Long logId;
 
+    @NotBlank(message = "faceUrl不能为空")
+    private String faceUrl;
     private LocalDateTime registerTime; // 注册时间（可选）
 
 }

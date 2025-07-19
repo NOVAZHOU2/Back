@@ -24,6 +24,9 @@ public class FaceData {
     @Column(name = "register_time", updatable = false)
     private LocalDateTime registerTime;
 
+    @Column(name = "face_url")
+    private String faceUrl;
+
     @Column(name = "log_id")
     private Long logId;
 
@@ -33,8 +36,17 @@ public class FaceData {
     @JsonIgnore
     private Person person;
 
+
     // Getters and Setters
 
+
+    public String getFaceUrl() {
+        return faceUrl;
+    }
+
+    public void setFaceUrl(String faceUrl) {
+        this.faceUrl = faceUrl;
+    }
 
     public Long getPersonId() {
         return personId;

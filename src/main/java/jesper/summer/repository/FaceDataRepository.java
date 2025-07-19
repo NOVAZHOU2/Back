@@ -20,13 +20,15 @@ public interface FaceDataRepository extends JpaRepository<FaceData, Long> {
     @Query("UPDATE FaceData fd SET " +
             "fd.faceToken = :faceToken, " +
             "fd.groupId = :groupId, " +
-            "fd.logId = :logId " +
+            "fd.logId = :logId, " +
+            "fd.faceUrl = :faceUrl " +
             "WHERE fd.personId = :personId")
     int upsertFaceData(
             @Param("personId") Long personId,
             @Param("faceToken") String faceToken,
             @Param("groupId") String groupId,
-            @Param("logId") Long logId
+            @Param("logId") Long logId,
+            @Param("faceUrl") String faceUrl
     );
 
     Optional<FaceData> findByPersonId(Long personId);

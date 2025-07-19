@@ -73,7 +73,7 @@ public class FaceUtils {
     public JSONObject deleteFace(String userId, String groupId, String faceToken) {
         HashMap<String, String> options = new HashMap<String, String>();
         AipFace client = createAipFaceClient();
-        return client.faceDelete(userId, groupId, faceToken,options);
+        return client.faceDelete(userId, groupId, faceToken, options);
     }
 
 

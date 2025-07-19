@@ -38,7 +38,7 @@ public class FaceServiceImpl implements FaceService {
 
     // 人脸注册（含数据库记录）
     @Transactional
-    public JSONObject registerFace(Long personId, MultipartFile file, String groupId, String userInfo) throws BaiduApiException, IOException, BusinessException {
+    public JSONObject registerFace(Long personId, MultipartFile file, String groupId,String faceUrl, String userInfo) throws BaiduApiException, IOException, BusinessException {
         // 调用百度API注册
         // 1. 先检查是否已存在记录（避免重复注册）
         if(faceDataMapper.existsById(personId)) {
@@ -59,6 +59,7 @@ public class FaceServiceImpl implements FaceService {
         faceData.setFaceToken(faceToken);
         faceData.setGroupId(groupId);
         faceData.setLogId(logId);
+        faceData.setFaceUrl(faceUrl);
         faceData.setRegisterTime(LocalDateTime.now());
 
 
@@ -115,7 +116,7 @@ public class FaceServiceImpl implements FaceService {
 
 
     // 人脸信息更新
-    public JSONObject updateFace(Long personId, MultipartFile file, String groupId, String userInfo) throws BaiduApiException, IOException {
+    public JSONObject updateFace(Long personId, MultipartFile file, String groupId, String faceUrl ,String userInfo) throws BaiduApiException, IOException {
 
         FaceData faceData = faceDataMapper.getReferenceById(personId);
         String imageBase64 = Base64.getEncoder().encodeToString(file.getBytes());
@@ -140,7 +141,7 @@ public class FaceServiceImpl implements FaceService {
             ));
         }
         JSONObject faceResult = result.getJSONObject("result");
-        faceDataMapper.upsertFaceData(personId,faceResult.getString("face_token"),groupId,result.getLong("log_id"));
+        faceDataMapper.upsertFaceData(personId,faceResult.getString("face_token"),groupId,result.getLong("log_id"),faceUrl);
         return result;
     }
 }

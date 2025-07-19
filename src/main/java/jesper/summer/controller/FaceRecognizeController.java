@@ -31,12 +31,14 @@ public class FaceRecognizeController {
             @RequestParam Long personId,
             @RequestPart("file") MultipartFile file,
             @RequestParam String groupId,
+            @RequestParam String faceUrl,
             @RequestParam(required = false) String userInfo) throws BaiduApiException, IOException, BusinessException {
 
         JSONObject result = faceService.registerFace(
                 personId,
                 file,
                 groupId,
+                faceUrl,
                 userInfo
         );
         return ResponseEntity.ok(result.toMap());
@@ -73,12 +75,14 @@ public class FaceRecognizeController {
             @RequestParam Long personId,
             @RequestPart("file") MultipartFile file,
             @RequestParam String groupId,
+            @RequestParam String faceUrl,
             @RequestParam(required = false) String userInfo) throws BaiduApiException, IOException {
 
         JSONObject result = faceService.updateFace(
                 personId,
                 file,
                 groupId,
+                faceUrl,
                 userInfo
         );
         return ResponseEntity.ok(result.toMap());
