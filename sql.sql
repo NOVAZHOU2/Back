@@ -2,7 +2,7 @@
 use demo1;
 
 CREATE TABLE person(
-                       id BIGINT PRIMARY KEY COMMENT '雪花算法生成的ID',
+                       id BIGINT AUTO_INCREMENT PRIMARY KEY COMMENT '雪花算法生成的ID',
                        name VARCHAR(50) NOT NULL COMMENT '姓名'
 );
 
