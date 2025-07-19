@@ -4,6 +4,7 @@ import jesper.summer.entity.Person;
 import jesper.summer.exception.BaiduApiException;
 import jesper.summer.exception.BusinessException;
 import jesper.summer.service.FaceService;
+import lombok.extern.slf4j.Slf4j;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +16,7 @@ import java.io.IOException;
 
 @Controller
 @RequestMapping("/api/recognize")
+@Slf4j
 public class FaceRecognizeController {
     private final FaceService faceService;
 
@@ -41,7 +43,7 @@ public class FaceRecognizeController {
     }
 
     // 人脸识别接口
-    @GetMapping("/recognize")
+    @PostMapping("/recognize")
     public ResponseEntity<?> recognizeFace(
             @RequestPart("file") MultipartFile file,
             @RequestParam String groupIdList) throws BaiduApiException, IOException {
@@ -50,6 +52,7 @@ public class FaceRecognizeController {
                 file,
                 groupIdList
         );
+        log.info(result.toString());
         return ResponseEntity.ok(result);
     }
 

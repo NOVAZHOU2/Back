@@ -92,7 +92,7 @@ public class FaceServiceImpl implements FaceService {
             System.out.println("未识别到匹配的用户");
         }
 
-
+        log.info("Face recognize: " + userId);
         return personMapper.getPersonById(userId);
     }
 

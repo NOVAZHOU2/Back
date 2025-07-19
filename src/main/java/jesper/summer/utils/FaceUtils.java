@@ -25,7 +25,9 @@ public class FaceUtils {
             @Value("${baidu.face.api-key}") String apiKey1,
             @Value("${baidu.face.secret-key}") String secretKey1
     ) {
-
+        this.appId = appId1;
+        this.apiKey = apiKey1;
+        this.secretKey = secretKey1;
         AipFace client = new AipFace(this.appId, this.apiKey, this.secretKey);
         client.setConnectionTimeoutInMillis(2000);
         client.setSocketTimeoutInMillis(60000);

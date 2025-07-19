@@ -16,13 +16,12 @@ import java.time.LocalDateTime;
 public class AccessLog {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 关键配置：自动增长
     @Column(name = "log_id")  // 新增主键（图片中未显示但用户要求添加）
     private Long logId;
 
     @Column(name = "person_id")
     private Long personId;  // bigint
-
 
     @CreationTimestamp
     @Column(name = "access_time", updatable = false, columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")

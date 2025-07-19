@@ -50,8 +50,6 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
     Page<Person> findAllWithAssociations(Pageable pageable);    // 分页查询所有人员（包含关联的detail和faceData）
 
     @Query("SELECT p FROM Person p " +
-            "LEFT JOIN FETCH p.detail " +
-            "LEFT JOIN FETCH p.facedata " +
             "WHERE p.id = :userId")
     Person getPersonById(Long userId);
 
