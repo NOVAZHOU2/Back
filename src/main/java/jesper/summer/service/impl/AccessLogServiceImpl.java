@@ -60,4 +60,13 @@ public class AccessLogServiceImpl implements AccessLogService {
     public List<VisitorRatio> getPersonCount() {
         return repository.countPerson();
     }
+
+    public List<AccessLog> getHighTemperatureLogs() {
+        return repository.findByTemperatureGreaterThan(37.5f);
+    }
+
+    public List<AccessLog> getNightTimeLogs() {
+        // 方法1：使用HOUR函数查询
+        return repository.findNightTimeLogs();
+    }
 }

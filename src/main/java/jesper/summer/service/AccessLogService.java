@@ -17,4 +17,8 @@ public interface AccessLogService {
     List<DeviceAccessCountVO> getDeviceAccessCountStop();
 
     List<VisitorRatio> getPersonCount();
+
+    List<AccessLog> getHighTemperatureLogs();
+
+    List<AccessLog> getNightTimeLogs();
 }

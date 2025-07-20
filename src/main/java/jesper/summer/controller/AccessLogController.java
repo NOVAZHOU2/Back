@@ -85,7 +85,15 @@ public class AccessLogController {
         private List<Long> logIds;
     }
 
+    @GetMapping("/high-temperature")
+    public ResponseEntity<List<AccessLog>> getHighTemperatureLogs() {
+        return ResponseEntity.ok(service.getHighTemperatureLogs());
+    }
 
+    @GetMapping("/night-time")
+    public ResponseEntity<List<AccessLog>> getNightTimeLogs() {
+        return ResponseEntity.ok(service.getNightTimeLogs());
+    }
 
 
 

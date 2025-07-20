@@ -891,3 +891,110 @@
       }
   ]
   ```
+
+### 24. 获取高体温异常数据
+
+- **请求方法**: GET
+
+- **路径**: `logs/high-temperature`
+
+- **请求体**:
+
+  ```json
+  
+  ```
+
+- **响应体（200）**:
+
+  ```json
+  [
+      {
+          "logId": 1,
+          "personId": 1,
+          "accessTime": "2025-07-20T16:23:24",
+          "accessType": 1,
+          "result": 1,
+          "temperature": 39.0,
+          "confidence": 0.95,
+          "captureImage": "/snapshots/2025/1001.jpg",
+          "deviceId": "DEV-001"
+      },
+      {
+          "logId": 3,
+          "personId": 1,
+          "accessTime": "2025-07-20T16:23:35",
+          "accessType": 1,
+          "result": 0,
+          "temperature": 39.5,
+          "confidence": 0.95,
+          "captureImage": "/snapshots/2025/1001.jpg",
+          "deviceId": "DEV-001"
+      },
+      {
+          "logId": 5,
+          "personId": 1,
+          "accessTime": "2025-07-20T16:24:38",
+          "accessType": 1,
+          "result": 0,
+          "temperature": 39.0,
+          "confidence": 0.95,
+          "captureImage": "/snapshots/2025/1001.jpg",
+          "deviceId": "DEV-002"
+      }
+  ]
+  ```
+
+
+### 25. 获取夜间通行数据
+
+- **请求方法**: GET
+
+- **路径**: `logs/night-time`
+
+- **请求体**:
+
+  ```json
+  
+  ```
+
+- **响应体（200）**:
+
+  ```json
+  [
+      {
+          "logId": 1,
+          "personId": 1,
+          "accessTime": "2025-07-20T4:23:24",
+          "accessType": 1,
+          "result": 1,
+          "temperature": 39.0,
+          "confidence": 0.95,
+          "captureImage": "/snapshots/2025/1001.jpg",
+          "deviceId": "DEV-001"
+      },
+      {
+          "logId": 3,
+          "personId": 1,
+          "accessTime": "2025-07-20T3:23:35",
+          "accessType": 1,
+          "result": 0,
+          "temperature": 39.5,
+          "confidence": 0.95,
+          "captureImage": "/snapshots/2025/1001.jpg",
+          "deviceId": "DEV-001"
+      },
+      {
+          "logId": 5,
+          "personId": 1,
+          "accessTime": "2025-07-20T4:24:38",
+          "accessType": 1,
+          "result": 0,
+          "temperature": 39.0,
+          "confidence": 0.95,
+          "captureImage": "/snapshots/2025/1001.jpg",
+          "deviceId": "DEV-002"
+      }
+  ]
+  ```
+
+### 
