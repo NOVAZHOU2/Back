@@ -1,23 +1,30 @@
-2025-07-19T16:36:21.534+08:00  INFO 6164 --- [Summer] [main] jesper.summer.SummerApplication          : Starting SummerApplication using Java 20.0.1 with PID 6164 (E:\Desktop\Github desktop备份集\Back\target\classes started by 13620 in E:\Desktop\Github desktop备份集\Back)
-2025-07-19T16:36:21.543+08:00  INFO 6164 --- [Summer] [main] jesper.summer.SummerApplication          : No active profile set, falling back to 1 default profile: "default"
-2025-07-19T16:36:22.286+08:00  INFO 6164 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-19T16:36:22.346+08:00  INFO 6164 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49 ms. Found 5 JPA repository interfaces.
-2025-07-19T16:36:23.228+08:00  INFO 6164 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10123 (http)
-2025-07-19T16:36:23.244+08:00  INFO 6164 --- [Summer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-19T16:36:23.245+08:00  INFO 6164 --- [Summer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-19T16:36:23.300+08:00  INFO 6164 --- [Summer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-19T16:36:23.301+08:00  INFO 6164 --- [Summer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1665 ms
-2025-07-19T16:36:23.451+08:00  INFO 6164 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-19T16:36:24.737+08:00  INFO 6164 --- [Summer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-19T16:36:24.788+08:00  INFO 6164 --- [Summer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-19T16:36:24.821+08:00  INFO 6164 --- [Summer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-19T16:36:24.920+08:00  INFO 6164 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-19T16:36:25.926+08:00  WARN 6164 --- [Summer] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1045, SQLState: 28000
-2025-07-19T16:36:25.926+08:00 ERROR 6164 --- [Summer] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Access denied for user 'root'@'localhost' (using password: YES)
-2025-07-19T16:36:25.927+08:00  WARN 6164 --- [Summer] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+2025-07-20T08:36:06.194+08:00  WARN 40160 --- [Summer] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15h38m20s321ms360µs900ns).
+2025-07-20T16:09:27.967+08:00  INFO 40160 --- [Summer] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-20T16:09:28.019+08:00  INFO 40160 --- [Summer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-20T16:09:28.060+08:00  INFO 40160 --- [Summer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-20T16:09:28.094+08:00  INFO 40160 --- [Summer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-20T16:09:28.103+08:00  INFO 40160 --- [Summer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-20T16:19:31.864+08:00  INFO 25664 --- [Summer] [main] jesper.summer.SummerApplication          : Starting SummerApplication using Java 20.0.1 with PID 25664 (E:\Desktop\Github desktop备份集\Back\target\classes started by 13620 in E:\Desktop\Github desktop备份集\Back)
+2025-07-20T16:19:31.866+08:00  INFO 25664 --- [Summer] [main] jesper.summer.SummerApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-07-20T16:19:32.950+08:00  INFO 25664 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-20T16:19:33.074+08:00  INFO 25664 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 104 ms. Found 5 JPA repository interfaces.
+2025-07-20T16:19:35.013+08:00  INFO 25664 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10123 (http)
+2025-07-20T16:19:35.034+08:00  INFO 25664 --- [Summer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-20T16:19:35.035+08:00  INFO 25664 --- [Summer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-20T16:19:35.104+08:00  INFO 25664 --- [Summer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-20T16:19:35.105+08:00  INFO 25664 --- [Summer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3143 ms
+2025-07-20T16:19:35.383+08:00  INFO 25664 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-20T16:19:37.009+08:00  INFO 25664 --- [Summer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-20T16:19:37.235+08:00  INFO 25664 --- [Summer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-20T16:19:37.319+08:00  INFO 25664 --- [Summer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-20T16:19:37.599+08:00  INFO 25664 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-20T16:19:38.633+08:00  WARN 25664 --- [Summer] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
+2025-07-20T16:19:38.634+08:00 ERROR 25664 --- [Summer] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'project'
+2025-07-20T16:19:38.639+08:00  WARN 25664 --- [Summer] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
 
-org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [Access denied for user 'root'@'localhost' (using password: YES)] [n/a]
-	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+org.hibernate.exception.SQLGrammarException: unable to obtain isolated JDBC connection [Unknown database 'project'] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:91) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
 	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
 	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
@@ -63,8 +70,8 @@ org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC con
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.3.jar:3.5.3]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.3.jar:3.5.3]
 	at jesper.summer.SummerApplication.main(SummerApplication.java:15) ~[classes/:na]
-Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.2.0.jar:9.2.0]
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'project'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.2.0.jar:9.2.0]
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.2.0.jar:9.2.0]
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:837) ~[mysql-connector-j-9.2.0.jar:9.2.0]
 	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420) ~[mysql-connector-j-9.2.0.jar:9.2.0]
@@ -82,9 +89,9 @@ Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (usi
 	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.18.Final.jar:6.6.18.Final]
 	... 42 common frames omitted
 
-2025-07-19T16:36:25.946+08:00  WARN 6164 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-07-19T16:36:25.947+08:00  WARN 6164 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-07-19T16:36:25.954+08:00  INFO 6164 --- [Summer] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-07-20T16:19:38.741+08:00  WARN 25664 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-20T16:19:38.744+08:00  WARN 25664 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-20T16:19:38.777+08:00  INFO 25664 --- [Summer] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -92,59 +99,71 @@ Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (usi
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-07-19T16:36:26.127+08:00  INFO 6164 --- [Summer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-19T16:36:26.141+08:00 DEBUG 6164 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5c60c08) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1cb44a2f)
-2025-07-19T16:36:26.141+08:00 DEBUG 6164 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5fe3b058) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2a661215)
-2025-07-19T16:36:26.141+08:00 DEBUG 6164 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@1f75fd1d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@212e39ee)
-2025-07-19T16:36:26.141+08:00 DEBUG 6164 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@638d2ce3) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@79617c3d)
-2025-07-19T16:36:26.141+08:00 DEBUG 6164 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@49cceb19) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@197d5a87)
-2025-07-19T16:36:26.141+08:00 DEBUG 6164 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@131d977f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@616f81b5)
-2025-07-19T16:36:26.141+08:00 DEBUG 6164 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4f552aa2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3c8fe8ad)
-2025-07-19T16:36:26.142+08:00 DEBUG 6164 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@43d6262c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5e2975ca)
-2025-07-19T16:36:26.142+08:00 DEBUG 6164 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@38cf4497) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7b4619a3)
-2025-07-19T16:36:27.042+08:00  INFO 6164 --- [Summer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-19T16:36:27.045+08:00  INFO 6164 --- [Summer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-19T16:36:27.381+08:00  INFO 6164 --- [Summer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-07-19T16:36:27.776+08:00  INFO 6164 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiId:119499427
-2025-07-19T16:36:27.778+08:00  INFO 6164 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiKey:9BVVD2tzTetaizb4JmaUZDBC
-2025-07-19T16:36:27.778+08:00  INFO 6164 --- [Summer] [main] jesper.summer.utils.FaceUtils            : secretKey:Xs3B1e9tK6pe2R7jYA5opCOedQtvPQGh
-2025-07-19T16:36:28.402+08:00  WARN 6164 --- [Summer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-19T16:36:28.606+08:00  WARN 6164 --- [Summer] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+2025-07-20T16:19:39.822+08:00  INFO 25664 --- [Summer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-20T16:19:39.860+08:00 DEBUG 25664 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@144440f5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3e2c8ef)
+2025-07-20T16:19:39.861+08:00 DEBUG 25664 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@290807e5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@60bc308b)
+2025-07-20T16:19:39.861+08:00 DEBUG 25664 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@56499781) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@43f99817)
+2025-07-20T16:19:39.862+08:00 DEBUG 25664 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2a2798a2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2b9ecd05)
+2025-07-20T16:19:39.862+08:00 DEBUG 25664 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@31f1b268) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3ec7ad61)
+2025-07-20T16:19:39.862+08:00 DEBUG 25664 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2833c093) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@7598d675)
+2025-07-20T16:19:39.863+08:00 DEBUG 25664 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4946485c) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4ae958b0)
+2025-07-20T16:19:39.864+08:00 DEBUG 25664 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7c682e26) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@4ff074a0)
+2025-07-20T16:19:39.864+08:00 DEBUG 25664 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@340fc1aa) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@34a33343)
+2025-07-20T16:19:42.638+08:00  INFO 25664 --- [Summer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-20T16:19:42.648+08:00  INFO 25664 --- [Summer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-20T16:19:43.622+08:00  INFO 25664 --- [Summer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-20T16:19:45.100+08:00  INFO 25664 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiId:119499427
+2025-07-20T16:19:45.100+08:00  INFO 25664 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiKey:9BVVD2tzTetaizb4JmaUZDBC
+2025-07-20T16:19:45.102+08:00  INFO 25664 --- [Summer] [main] jesper.summer.utils.FaceUtils            : secretKey:Xs3B1e9tK6pe2R7jYA5opCOedQtvPQGh
+2025-07-20T16:19:47.018+08:00  WARN 25664 --- [Summer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-20T16:19:47.463+08:00  WARN 25664 --- [Summer] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: ee3f3f4a-fb26-4ccd-819d-73e6b007cff5
+Using generated security password: 3fe5b323-0660-439c-8a65-abd4d2064552
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-07-19T16:36:28.614+08:00  INFO 6164 --- [Summer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-07-19T16:36:28.997+08:00  INFO 6164 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10123 (http) with context path '/'
-2025-07-19T16:36:29.006+08:00  INFO 6164 --- [Summer] [main] jesper.summer.SummerApplication          : Started SummerApplication in 8.421 seconds (process running for 9.857)
-2025-07-19T16:36:41.906+08:00  INFO 6164 --- [Summer] [http-nio-10123-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-19T16:36:41.906+08:00  INFO 6164 --- [Summer] [http-nio-10123-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-19T16:36:41.908+08:00  INFO 6164 --- [Summer] [http-nio-10123-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-07-19T16:36:42.039+08:00  INFO 6164 --- [Summer] [http-nio-10123-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-19T16:36:43.058+08:00  WARN 6164 --- [Summer] [http-nio-10123-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1045, SQLState: 28000
-2025-07-19T16:36:43.058+08:00 ERROR 6164 --- [Summer] [http-nio-10123-exec-1] o.h.engine.jdbc.spi.SqlExceptionHelper   : Access denied for user 'root'@'localhost' (using password: YES)
-2025-07-19T16:37:10.107+08:00  INFO 6164 --- [Summer] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-19T16:37:10.126+08:00  INFO 6164 --- [Summer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-19T16:37:10.130+08:00  INFO 6164 --- [Summer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-19T16:37:15.909+08:00  INFO 41500 --- [Summer] [main] jesper.summer.SummerApplication          : Starting SummerApplication using Java 20.0.1 with PID 41500 (E:\Desktop\Github desktop备份集\Back\target\classes started by 13620 in E:\Desktop\Github desktop备份集\Back)
-2025-07-19T16:37:15.914+08:00  INFO 41500 --- [Summer] [main] jesper.summer.SummerApplication          : No active profile set, falling back to 1 default profile: "default"
-2025-07-19T16:37:16.808+08:00  INFO 41500 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-19T16:37:16.900+08:00  INFO 41500 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 5 JPA repository interfaces.
-2025-07-19T16:37:17.958+08:00  INFO 41500 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10123 (http)
-2025-07-19T16:37:17.978+08:00  INFO 41500 --- [Summer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-19T16:37:17.979+08:00  INFO 41500 --- [Summer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-19T16:37:18.036+08:00  INFO 41500 --- [Summer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-19T16:37:18.038+08:00  INFO 41500 --- [Summer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2031 ms
-2025-07-19T16:37:18.174+08:00  INFO 41500 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-19T16:37:18.351+08:00  INFO 41500 --- [Summer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f315b08
-2025-07-19T16:37:18.354+08:00  INFO 41500 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-19T16:37:18.423+08:00  INFO 41500 --- [Summer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-19T16:37:18.489+08:00  INFO 41500 --- [Summer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-19T16:37:18.531+08:00  INFO 41500 --- [Summer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-19T16:37:18.697+08:00  WARN 41500 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-07-19T16:37:18.698+08:00  WARN 41500 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-07-19T16:37:18.711+08:00  INFO 41500 --- [Summer] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-07-20T16:19:47.478+08:00  INFO 25664 --- [Summer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-20T16:19:49.341+08:00  INFO 25664 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10123 (http) with context path '/'
+2025-07-20T16:19:49.367+08:00  INFO 25664 --- [Summer] [main] jesper.summer.SummerApplication          : Started SummerApplication in 18.409 seconds (process running for 21.798)
+2025-07-20T16:19:50.539+08:00  INFO 25664 --- [Summer] [http-nio-10123-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-20T16:19:50.540+08:00  INFO 25664 --- [Summer] [http-nio-10123-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-20T16:19:50.542+08:00  INFO 25664 --- [Summer] [http-nio-10123-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-20T16:19:50.698+08:00 DEBUG 25664 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
+    select
+        al1_0.device_id,
+        count(al1_0.log_id) 
+    from
+        access_log al1_0 
+    where
+        date(al1_0.access_time)=current_date 
+        and al1_0.result=1 
+    group by
+        al1_0.device_id
+2025-07-20T16:19:50.698+08:00  INFO 25664 --- [Summer] [http-nio-10123-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-20T16:19:51.716+08:00  WARN 25664 --- [Summer] [http-nio-10123-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1049, SQLState: 42000
+2025-07-20T16:19:51.716+08:00 ERROR 25664 --- [Summer] [http-nio-10123-exec-2] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown database 'project'
+2025-07-20T16:19:51.723+08:00 ERROR 25664 --- [Summer] [http-nio-10123-exec-2] j.s.exception.GlobalExceptionHandler     : Unable to acquire JDBC Connection [Unknown database 'project'] [n/a]; SQL [n/a]
+2025-07-20T16:20:23.049+08:00  INFO 25664 --- [Summer] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-20T16:20:23.067+08:00  INFO 25664 --- [Summer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-20T16:20:23.070+08:00  INFO 25664 --- [Summer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-20T16:20:26.616+08:00  INFO 12368 --- [Summer] [main] jesper.summer.SummerApplication          : Starting SummerApplication using Java 20.0.1 with PID 12368 (E:\Desktop\Github desktop备份集\Back\target\classes started by 13620 in E:\Desktop\Github desktop备份集\Back)
+2025-07-20T16:20:26.621+08:00  INFO 12368 --- [Summer] [main] jesper.summer.SummerApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-07-20T16:20:27.744+08:00  INFO 12368 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-20T16:20:27.854+08:00  INFO 12368 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 5 JPA repository interfaces.
+2025-07-20T16:20:28.868+08:00  INFO 12368 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10123 (http)
+2025-07-20T16:20:28.887+08:00  INFO 12368 --- [Summer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-20T16:20:28.887+08:00  INFO 12368 --- [Summer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-20T16:20:28.953+08:00  INFO 12368 --- [Summer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-20T16:20:28.954+08:00  INFO 12368 --- [Summer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2210 ms
+2025-07-20T16:20:29.124+08:00  INFO 12368 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-20T16:20:29.357+08:00  INFO 12368 --- [Summer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b170235
+2025-07-20T16:20:29.361+08:00  INFO 12368 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-20T16:20:29.418+08:00  INFO 12368 --- [Summer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-20T16:20:29.492+08:00  INFO 12368 --- [Summer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-20T16:20:29.536+08:00  INFO 12368 --- [Summer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-20T16:20:29.757+08:00  WARN 12368 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-20T16:20:29.758+08:00  WARN 12368 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-20T16:20:29.774+08:00  INFO 12368 --- [Summer] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -152,346 +171,192 @@ This generated password is for development use only. Your security configuration
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-07-19T16:37:18.951+08:00  INFO 41500 --- [Summer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-19T16:37:18.967+08:00 DEBUG 41500 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4e51eda7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2862271a)
-2025-07-19T16:37:18.968+08:00 DEBUG 41500 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2419fe6f) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@78fb72cb)
-2025-07-19T16:37:18.968+08:00 DEBUG 41500 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@398694a6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@653e7b)
-2025-07-19T16:37:18.968+08:00 DEBUG 41500 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6b64429e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@48aa0813)
-2025-07-19T16:37:18.968+08:00 DEBUG 41500 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@45849604) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6cbbfe29)
-2025-07-19T16:37:18.968+08:00 DEBUG 41500 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@25823192) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3df04fa1)
-2025-07-19T16:37:18.969+08:00 DEBUG 41500 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5c25daad) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6fdc2db6)
-2025-07-19T16:37:18.969+08:00 DEBUG 41500 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@5be69f7e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@64544ee4)
-2025-07-19T16:37:18.970+08:00 DEBUG 41500 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@16d61071) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@18692e80)
-2025-07-19T16:37:19.879+08:00  INFO 41500 --- [Summer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-19T16:37:19.883+08:00  INFO 41500 --- [Summer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-19T16:37:20.199+08:00  INFO 41500 --- [Summer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-07-19T16:37:20.532+08:00  INFO 41500 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiId:119499427
-2025-07-19T16:37:20.532+08:00  INFO 41500 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiKey:9BVVD2tzTetaizb4JmaUZDBC
-2025-07-19T16:37:20.532+08:00  INFO 41500 --- [Summer] [main] jesper.summer.utils.FaceUtils            : secretKey:Xs3B1e9tK6pe2R7jYA5opCOedQtvPQGh
-2025-07-19T16:37:21.127+08:00  WARN 41500 --- [Summer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-19T16:37:21.295+08:00  WARN 41500 --- [Summer] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+2025-07-20T16:20:30.038+08:00  INFO 12368 --- [Summer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-20T16:20:30.056+08:00 DEBUG 12368 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@78fb72cb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@398694a6)
+2025-07-20T16:20:30.057+08:00 DEBUG 12368 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@653e7b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6b64429e)
+2025-07-20T16:20:30.057+08:00 DEBUG 12368 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@48aa0813) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@45849604)
+2025-07-20T16:20:30.057+08:00 DEBUG 12368 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6cbbfe29) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@25823192)
+2025-07-20T16:20:30.057+08:00 DEBUG 12368 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3df04fa1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5c25daad)
+2025-07-20T16:20:30.057+08:00 DEBUG 12368 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6fdc2db6) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5be69f7e)
+2025-07-20T16:20:30.058+08:00 DEBUG 12368 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@64544ee4) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@16d61071)
+2025-07-20T16:20:30.058+08:00 DEBUG 12368 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@18692e80) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@779b4f9c)
+2025-07-20T16:20:30.058+08:00 DEBUG 12368 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@31fe0ce5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@178dc733)
+2025-07-20T16:20:31.268+08:00  INFO 12368 --- [Summer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-20T16:20:31.272+08:00  INFO 12368 --- [Summer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-20T16:20:31.618+08:00  INFO 12368 --- [Summer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-20T16:20:32.418+08:00  INFO 12368 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiId:119499427
+2025-07-20T16:20:32.419+08:00  INFO 12368 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiKey:9BVVD2tzTetaizb4JmaUZDBC
+2025-07-20T16:20:32.419+08:00  INFO 12368 --- [Summer] [main] jesper.summer.utils.FaceUtils            : secretKey:Xs3B1e9tK6pe2R7jYA5opCOedQtvPQGh
+2025-07-20T16:20:33.061+08:00  WARN 12368 --- [Summer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-20T16:20:33.266+08:00  WARN 12368 --- [Summer] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: c2ca7fb1-3f56-4f2f-9880-e5f80e8d9350
+Using generated security password: 27e6ff2b-501a-4125-91d2-67abb2a65bf3
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-07-19T16:37:21.301+08:00  INFO 41500 --- [Summer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-07-19T16:37:21.600+08:00  INFO 41500 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10123 (http) with context path '/'
-2025-07-19T16:37:21.607+08:00  INFO 41500 --- [Summer] [main] jesper.summer.SummerApplication          : Started SummerApplication in 6.411 seconds (process running for 7.354)
-2025-07-19T16:37:48.650+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-19T16:37:48.651+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-19T16:37:48.657+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-07-19T16:37:48.938+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
+2025-07-20T16:20:33.276+08:00  INFO 12368 --- [Summer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-20T16:20:33.621+08:00  INFO 12368 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10123 (http) with context path '/'
+2025-07-20T16:20:33.629+08:00  INFO 12368 --- [Summer] [main] jesper.summer.SummerApplication          : Started SummerApplication in 8.124 seconds (process running for 8.947)
+2025-07-20T16:22:04.063+08:00  INFO 12368 --- [Summer] [http-nio-10123-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-20T16:22:04.064+08:00  INFO 12368 --- [Summer] [http-nio-10123-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-20T16:22:04.066+08:00  INFO 12368 --- [Summer] [http-nio-10123-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-07-20T16:22:04.283+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-4] org.hibernate.SQL                        : 
     select
-        pd1_0.person_id 
+        al1_0.device_id,
+        count(al1_0.log_id) 
     from
-        person_detail pd1_0 
+        access_log al1_0 
     where
-        pd1_0.id_card=? 
-    limit
-        ?
-2025-07-19T16:37:49.002+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
+        date(al1_0.access_time)=current_date 
+        and al1_0.result=1 
+    group by
+        al1_0.device_id
+2025-07-20T16:23:01.949+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-7] org.hibernate.SQL                        : 
+    select
+        ad1_0.device_id,
+        ad1_0.create_time,
+        ad1_0.device_name,
+        ad1_0.device_type,
+        ad1_0.latitude,
+        ad1_0.location,
+        ad1_0.longitude,
+        ad1_0.remark,
+        ad1_0.status,
+        ad1_0.update_time 
+    from
+        access_device ad1_0 
+    where
+        ad1_0.device_id=?
+2025-07-20T16:23:02.019+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-7] org.hibernate.SQL                        : 
     insert 
     into
-        person
-        (name) 
+        access_device
+        (create_time, device_name, device_type, latitude, location, longitude, remark, status, update_time, device_id) 
     values
-        (?)
-2025-07-19T16:37:49.038+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-20T16:23:23.872+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-3] org.hibernate.SQL                        : 
     insert 
     into
-        person_detail
-        (gender, id_card, name, phone, position, register_time, status, update_time, person_id) 
+        access_log
+        (access_time, access_type, capture_image, confidence, device_id, person_id, result, temperature) 
     values
-        (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-07-19T16:38:12.801+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-3] org.hibernate.SQL                        : 
-    select
-        count(*) 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:38:14.123+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-3] com.baidu.aip.client.BaseClient          : get access_token success. current state: STATE_AIP_AUTH_OK
-2025-07-19T16:38:16.718+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-3] j.summer.config.BaiduFaceResultHandler   : {"result":null,"log_id":4141769087,"error_msg":"face is already exist","cached":0,"error_code":223105,"timestamp":1752914297}
-2025-07-19T16:38:16.723+08:00 ERROR 41500 --- [Summer] [http-nio-10123-exec-3] j.s.exception.GlobalExceptionHandler     : 百度API错误 [223105]: 该人脸已存在
-2025-07-19T16:38:58.091+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-5] org.hibernate.SQL                        : 
-    select
-        count(*) 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:39:02.887+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-5] j.summer.config.BaiduFaceResultHandler   : {"result":{"face_token":"b0c946da8917cc89eeffd20b21eb5ba3","location":{"top":1465.99,"left":1994.18,"rotation":-5,"width":453,"height":464}},"log_id":4141769396,"error_msg":"SUCCESS","cached":0,"error_code":0,"timestamp":1752914343}
-2025-07-19T16:39:02.896+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-5] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        p2_0.id,
-        p2_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f2_0.person_id,
-        f2_0.face_token,
-        f2_0.face_url,
-        f2_0.group_id,
-        f2_0.log_id,
-        p3_0.id,
-        p3_0.name,
-        f2_0.register_time,
-        p1_0.name 
-    from
-        person p1_0 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        person p2_0 
-            on p2_0.id=d1_0.person_id 
-    left join
-        face_data f2_0 
-            on f2_0.person_id=p1_0.id 
-    left join
-        person p3_0 
-            on p3_0.id=f2_0.person_id 
-    where
-        p1_0.id=?
-2025-07-19T16:39:02.910+08:00 ERROR 41500 --- [Summer] [http-nio-10123-exec-5] j.s.exception.GlobalExceptionHandler     : Person not found
-2025-07-19T16:39:28.087+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-9] org.hibernate.SQL                        : 
-    select
-        count(*) 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:39:33.973+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-9] j.summer.config.BaiduFaceResultHandler   : {"result":null,"log_id":419127307,"error_msg":"face is already exist","cached":0,"error_code":223105,"timestamp":1752914374}
-2025-07-19T16:39:33.976+08:00 ERROR 41500 --- [Summer] [http-nio-10123-exec-9] j.s.exception.GlobalExceptionHandler     : 百度API错误 [223105]: 该人脸已存在
-2025-07-19T16:40:26.648+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-7] org.hibernate.SQL                        : 
-    select
-        count(*) 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:40:29.079+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-7] j.summer.config.BaiduFaceResultHandler   : {"result":{"face_token":"15201b1c2fd53296d32d31c16bfd7d61","location":{"top":671.25,"left":303.15,"rotation":-7,"width":233,"height":240}},"log_id":2132559232,"error_msg":"SUCCESS","cached":0,"error_code":0,"timestamp":1752914429}
-2025-07-19T16:40:29.080+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-7] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        p2_0.id,
-        p2_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f2_0.person_id,
-        f2_0.face_token,
-        f2_0.face_url,
-        f2_0.group_id,
-        f2_0.log_id,
-        p3_0.id,
-        p3_0.name,
-        f2_0.register_time,
-        p1_0.name 
-    from
-        person p1_0 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        person p2_0 
-            on p2_0.id=d1_0.person_id 
-    left join
-        face_data f2_0 
-            on f2_0.person_id=p1_0.id 
-    left join
-        person p3_0 
-            on p3_0.id=f2_0.person_id 
-    where
-        p1_0.id=?
-2025-07-19T16:40:29.082+08:00 ERROR 41500 --- [Summer] [http-nio-10123-exec-7] j.s.exception.GlobalExceptionHandler     : Person not found
-2025-07-19T16:40:36.904+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
-    select
-        count(*) 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:40:39.740+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-1] j.summer.config.BaiduFaceResultHandler   : {"result":{"face_token":"15201b1c2fd53296d32d31c16bfd7d61","location":{"top":671.26,"left":303.13,"rotation":-7,"width":233,"height":240}},"log_id":752697858,"error_msg":"SUCCESS","cached":0,"error_code":0,"timestamp":1752914440}
-2025-07-19T16:40:39.740+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        p2_0.id,
-        p2_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f2_0.person_id,
-        f2_0.face_token,
-        f2_0.face_url,
-        f2_0.group_id,
-        f2_0.log_id,
-        p3_0.id,
-        p3_0.name,
-        f2_0.register_time,
-        p1_0.name 
-    from
-        person p1_0 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        person p2_0 
-            on p2_0.id=d1_0.person_id 
-    left join
-        face_data f2_0 
-            on f2_0.person_id=p1_0.id 
-    left join
-        person p3_0 
-            on p3_0.id=f2_0.person_id 
-    where
-        p1_0.id=?
-2025-07-19T16:40:39.745+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:40:39.749+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-1] j.summer.service.impl.FaceServiceImpl    : Face register: jesper.summer.entity.FaceData@397e08f3
-2025-07-19T16:40:39.751+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-20T16:23:30.812+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-5] org.hibernate.SQL                        : 
     insert 
     into
-        face_data
-        (face_token, face_url, group_id, log_id, register_time, person_id) 
+        access_log
+        (access_time, access_type, capture_image, confidence, device_id, person_id, result, temperature) 
     values
-        (?, ?, ?, ?, ?, ?)
-2025-07-19T16:41:10.248+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-20T16:23:35.443+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-6] org.hibernate.SQL                        : 
+    insert 
+    into
+        access_log
+        (access_time, access_type, capture_image, confidence, device_id, person_id, result, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-20T16:23:37.784+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
+    insert 
+    into
+        access_log
+        (access_time, access_type, capture_image, confidence, device_id, person_id, result, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-20T16:23:42.838+08:00  WARN 12368 --- [Summer] [http-nio-10123-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2025-07-20T16:23:42.840+08:00 ERROR 12368 --- [Summer] [http-nio-10123-exec-8] j.s.exception.GlobalExceptionHandler     : No endpoint GET /.
+2025-07-20T16:24:11.877+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-9] org.hibernate.SQL                        : 
     select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
+        al1_0.device_id,
+        count(al1_0.log_id) 
     from
-        face_data fd1_0 
-    join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
+        access_log al1_0 
     where
-        fd1_0.person_id=?
-2025-07-19T16:41:10.944+08:00  INFO 41500 --- [Summer] [http-nio-10123-exec-2] j.summer.config.BaiduFaceResultHandler   : {"result":true,"log_id":72444853,"error_msg":"SUCCESS","cached":0,"error_code":0,"timestamp":1752914471}
-2025-07-19T16:41:10.951+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
+        date(al1_0.access_time)=current_date 
+        and al1_0.result=1 
+    group by
+        al1_0.device_id
+2025-07-20T16:24:32.779+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
     select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        fd1_0.register_time 
+        ad1_0.device_id,
+        ad1_0.create_time,
+        ad1_0.device_name,
+        ad1_0.device_type,
+        ad1_0.latitude,
+        ad1_0.location,
+        ad1_0.longitude,
+        ad1_0.remark,
+        ad1_0.status,
+        ad1_0.update_time 
     from
-        face_data fd1_0 
+        access_device ad1_0 
     where
-        fd1_0.face_token=?
-2025-07-19T16:41:10.958+08:00 DEBUG 41500 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
-    delete 
+        ad1_0.device_id=?
+2025-07-20T16:24:32.781+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        access_device
+        (create_time, device_name, device_type, latitude, location, longitude, remark, status, update_time, device_id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-20T16:24:38.207+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-4] org.hibernate.SQL                        : 
+    insert 
+    into
+        access_log
+        (access_time, access_type, capture_image, confidence, device_id, person_id, result, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-20T16:24:49.291+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-7] org.hibernate.SQL                        : 
+    select
+        al1_0.device_id,
+        count(al1_0.log_id) 
     from
-        face_data 
+        access_log al1_0 
     where
-        person_id=?
-2025-07-19T16:45:08.395+08:00  INFO 41500 --- [Summer] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-19T16:45:08.411+08:00  INFO 41500 --- [Summer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-07-19T16:45:08.415+08:00  INFO 41500 --- [Summer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-07-19T16:45:08.416+08:00  INFO 41500 --- [Summer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-07-19T16:45:08.421+08:00  INFO 41500 --- [Summer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-07-19T16:45:13.650+08:00  INFO 40160 --- [Summer] [main] jesper.summer.SummerApplication          : Starting SummerApplication using Java 20.0.1 with PID 40160 (E:\Desktop\Github desktop备份集\Back\target\classes started by 13620 in E:\Desktop\Github desktop备份集\Back)
-2025-07-19T16:45:13.654+08:00  INFO 40160 --- [Summer] [main] jesper.summer.SummerApplication          : No active profile set, falling back to 1 default profile: "default"
-2025-07-19T16:45:14.351+08:00  INFO 40160 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-07-19T16:45:14.409+08:00  INFO 40160 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 5 JPA repository interfaces.
-2025-07-19T16:45:15.215+08:00  INFO 40160 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10123 (http)
-2025-07-19T16:45:15.229+08:00  INFO 40160 --- [Summer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-07-19T16:45:15.230+08:00  INFO 40160 --- [Summer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-19T16:45:15.279+08:00  INFO 40160 --- [Summer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-07-19T16:45:15.279+08:00  INFO 40160 --- [Summer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1554 ms
-2025-07-19T16:45:15.401+08:00  INFO 40160 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-07-19T16:45:15.545+08:00  INFO 40160 --- [Summer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10e9a5fe
-2025-07-19T16:45:15.547+08:00  INFO 40160 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-07-19T16:45:15.601+08:00  INFO 40160 --- [Summer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-07-19T16:45:15.658+08:00  INFO 40160 --- [Summer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
-2025-07-19T16:45:15.692+08:00  INFO 40160 --- [Summer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-07-19T16:45:15.836+08:00  WARN 40160 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-07-19T16:45:15.837+08:00  WARN 40160 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2025-07-19T16:45:15.850+08:00  INFO 40160 --- [Summer] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+        date(al1_0.access_time)=current_date 
+        and al1_0.result=1 
+    group by
+        al1_0.device_id
+2025-07-20T16:25:06.913+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-3] org.hibernate.SQL                        : 
+    insert 
+    into
+        access_log
+        (access_time, access_type, capture_image, confidence, device_id, person_id, result, temperature) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+2025-07-20T16:25:36.399+08:00 DEBUG 12368 --- [Summer] [http-nio-10123-exec-5] org.hibernate.SQL                        : 
+    select
+        al1_0.device_id,
+        count(al1_0.log_id) 
+    from
+        access_log al1_0 
+    where
+        date(al1_0.access_time)=current_date 
+        and al1_0.result=1 
+    group by
+        al1_0.device_id
+2025-07-20T16:25:42.469+08:00  INFO 12368 --- [Summer] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-20T16:25:42.491+08:00  INFO 12368 --- [Summer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-20T16:25:42.497+08:00  INFO 12368 --- [Summer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-20T16:25:42.498+08:00  INFO 12368 --- [Summer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-20T16:25:42.508+08:00  INFO 12368 --- [Summer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-07-20T16:25:50.722+08:00  INFO 744 --- [Summer] [main] jesper.summer.SummerApplication          : Starting SummerApplication using Java 20.0.1 with PID 744 (E:\Desktop\Github desktop备份集\Back\target\classes started by 13620 in E:\Desktop\Github desktop备份集\Back)
+2025-07-20T16:25:50.728+08:00  INFO 744 --- [Summer] [main] jesper.summer.SummerApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-07-20T16:25:51.782+08:00  INFO 744 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-20T16:25:51.861+08:00  INFO 744 --- [Summer] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 5 JPA repository interfaces.
+2025-07-20T16:25:52.809+08:00  INFO 744 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 10123 (http)
+2025-07-20T16:25:52.828+08:00  INFO 744 --- [Summer] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-20T16:25:52.828+08:00  INFO 744 --- [Summer] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-20T16:25:52.889+08:00  INFO 744 --- [Summer] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-20T16:25:52.890+08:00  INFO 744 --- [Summer] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2039 ms
+2025-07-20T16:25:53.084+08:00  INFO 744 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-07-20T16:25:53.289+08:00  INFO 744 --- [Summer] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e362407
+2025-07-20T16:25:53.291+08:00  INFO 744 --- [Summer] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-20T16:25:53.342+08:00  INFO 744 --- [Summer] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-20T16:25:53.402+08:00  INFO 744 --- [Summer] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2025-07-20T16:25:53.456+08:00  INFO 744 --- [Summer] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-07-20T16:25:53.695+08:00  WARN 744 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-20T16:25:53.697+08:00  WARN 744 --- [Summer] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-07-20T16:25:53.711+08:00  INFO 744 --- [Summer] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0
@@ -499,817 +364,78 @@ This generated password is for development use only. Your security configuration
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-07-19T16:45:16.045+08:00  INFO 40160 --- [Summer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-07-19T16:45:16.062+08:00 DEBUG 40160 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4bab78ce) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@42ffbab6)
-2025-07-19T16:45:16.063+08:00 DEBUG 40160 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@7672960e) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@69bca406)
-2025-07-19T16:45:16.064+08:00 DEBUG 40160 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@79c1ccf7) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4654e373)
-2025-07-19T16:45:16.064+08:00 DEBUG 40160 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2474df51) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2864d34d)
-2025-07-19T16:45:16.064+08:00 DEBUG 40160 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5fb514c2) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3e9b3b3c)
-2025-07-19T16:45:16.064+08:00 DEBUG 40160 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@3c97f5e9) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@32e7b78d)
-2025-07-19T16:45:16.064+08:00 DEBUG 40160 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4583b617) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@22a63740)
-2025-07-19T16:45:16.065+08:00 DEBUG 40160 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@211da640) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2ec92631)
-2025-07-19T16:45:16.065+08:00 DEBUG 40160 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@76220ef1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@65ad2b42)
-2025-07-19T16:45:16.942+08:00  INFO 40160 --- [Summer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-07-19T16:45:16.944+08:00  INFO 40160 --- [Summer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-07-19T16:45:17.211+08:00  INFO 40160 --- [Summer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-07-19T16:45:17.553+08:00  INFO 40160 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiId:119499427
-2025-07-19T16:45:17.554+08:00  INFO 40160 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiKey:9BVVD2tzTetaizb4JmaUZDBC
-2025-07-19T16:45:17.554+08:00  INFO 40160 --- [Summer] [main] jesper.summer.utils.FaceUtils            : secretKey:Xs3B1e9tK6pe2R7jYA5opCOedQtvPQGh
-2025-07-19T16:45:18.130+08:00  WARN 40160 --- [Summer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-07-19T16:45:18.296+08:00  WARN 40160 --- [Summer] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+2025-07-20T16:25:53.980+08:00  INFO 744 --- [Summer] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-20T16:25:54.005+08:00 DEBUG 744 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(12, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@211da640) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2ec92631)
+2025-07-20T16:25:54.006+08:00 DEBUG 744 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-9, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@76220ef1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@65ad2b42)
+2025-07-20T16:25:54.007+08:00 DEBUG 744 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(-3, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@294ebe11) replaced previous registration(org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@4e51eda7)
+2025-07-20T16:25:54.007+08:00 DEBUG 744 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4003, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2862271a) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2419fe6f)
+2025-07-20T16:25:54.007+08:00 DEBUG 744 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4001, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@78fb72cb) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@398694a6)
+2025-07-20T16:25:54.007+08:00 DEBUG 744 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(4002, org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@653e7b) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@6b64429e)
+2025-07-20T16:25:54.008+08:00 DEBUG 744 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2004, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@48aa0813) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@45849604)
+2025-07-20T16:25:54.008+08:00 DEBUG 744 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2005, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@6cbbfe29) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@25823192)
+2025-07-20T16:25:54.008+08:00 DEBUG 744 --- [Summer] [main] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2011, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@3df04fa1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@5c25daad)
+2025-07-20T16:25:55.122+08:00  INFO 744 --- [Summer] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-20T16:25:55.128+08:00  INFO 744 --- [Summer] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-20T16:25:55.556+08:00  INFO 744 --- [Summer] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-20T16:25:56.464+08:00  INFO 744 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiId:119499427
+2025-07-20T16:25:56.465+08:00  INFO 744 --- [Summer] [main] jesper.summer.utils.FaceUtils            : apiKey:9BVVD2tzTetaizb4JmaUZDBC
+2025-07-20T16:25:56.465+08:00  INFO 744 --- [Summer] [main] jesper.summer.utils.FaceUtils            : secretKey:Xs3B1e9tK6pe2R7jYA5opCOedQtvPQGh
+2025-07-20T16:25:57.199+08:00  WARN 744 --- [Summer] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-20T16:25:57.441+08:00  WARN 744 --- [Summer] [main] .s.s.UserDetailsServiceAutoConfiguration : 
 
-Using generated security password: 903c7e98-fb49-47c6-8270-1a0a8bb04c07
+Using generated security password: a72e5d06-e9a6-4962-946b-2f1a08e419b5
 
 This generated password is for development use only. Your security configuration must be updated before running your application in production.
 
-2025-07-19T16:45:18.303+08:00  INFO 40160 --- [Summer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-07-19T16:45:18.588+08:00  INFO 40160 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10123 (http) with context path '/'
-2025-07-19T16:45:18.596+08:00  INFO 40160 --- [Summer] [main] jesper.summer.SummerApplication          : Started SummerApplication in 5.632 seconds (process running for 6.558)
-2025-07-19T16:45:25.152+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-19T16:45:25.154+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-07-19T16:45:25.155+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-07-19T16:45:25.314+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
+2025-07-20T16:25:57.450+08:00  INFO 744 --- [Summer] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-07-20T16:25:57.819+08:00  INFO 744 --- [Summer] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 10123 (http) with context path '/'
+2025-07-20T16:25:57.829+08:00  INFO 744 --- [Summer] [main] jesper.summer.SummerApplication          : Started SummerApplication in 9.182 seconds (process running for 12.742)
+2025-07-20T16:26:01.180+08:00  INFO 744 --- [Summer] [http-nio-10123-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-20T16:26:01.180+08:00  INFO 744 --- [Summer] [http-nio-10123-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-07-20T16:26:01.182+08:00  INFO 744 --- [Summer] [http-nio-10123-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-07-20T16:26:01.323+08:00 DEBUG 744 --- [Summer] [http-nio-10123-exec-3] org.hibernate.SQL                        : 
     select
-        count(*) 
+        al1_0.device_id,
+        count(al1_0.log_id) 
     from
-        face_data fd1_0 
+        access_log al1_0 
     where
-        fd1_0.person_id=?
-2025-07-19T16:45:26.099+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-1] com.baidu.aip.client.BaseClient          : get access_token success. current state: STATE_AIP_AUTH_OK
-2025-07-19T16:45:27.835+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-1] j.summer.config.BaiduFaceResultHandler   : {"result":{"face_token":"15201b1c2fd53296d32d31c16bfd7d61","location":{"top":671.26,"left":303.13,"rotation":-7,"width":233,"height":240}},"log_id":803833437,"error_msg":"SUCCESS","cached":0,"error_code":0,"timestamp":1752914728}
-2025-07-19T16:45:27.841+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
+        date(al1_0.access_time)=current_date 
+        and al1_0.result=1 
+    group by
+        al1_0.device_id
+2025-07-20T16:27:35.092+08:00 DEBUG 744 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
     select
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        p2_0.id,
-        p2_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f2_0.person_id,
-        f2_0.face_token,
-        f2_0.face_url,
-        f2_0.group_id,
-        f2_0.log_id,
-        p3_0.id,
-        p3_0.name,
-        f2_0.register_time,
-        p1_0.name 
+        al1_0.device_id,
+        count(al1_0.log_id) 
     from
-        person p1_0 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        person p2_0 
-            on p2_0.id=d1_0.person_id 
-    left join
-        face_data f2_0 
-            on f2_0.person_id=p1_0.id 
-    left join
-        person p3_0 
-            on p3_0.id=f2_0.person_id 
+        access_log al1_0 
     where
-        p1_0.id=?
-2025-07-19T16:45:27.855+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
+        date(al1_0.access_time)=current_date 
+        and al1_0.result=0 
+    group by
+        al1_0.device_id
+2025-07-20T16:28:07.527+08:00  WARN 744 --- [Summer] [http-nio-10123-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /api/logs/device/Person
+2025-07-20T16:28:07.531+08:00 ERROR 744 --- [Summer] [http-nio-10123-exec-6] j.s.exception.GlobalExceptionHandler     : No endpoint GET /api/logs/device/Person.
+2025-07-20T16:28:27.087+08:00 DEBUG 744 --- [Summer] [http-nio-10123-exec-8] org.hibernate.SQL                        : 
     select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
         d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
+        count(al1_0.log_id) 
     from
-        face_data fd1_0 
+        access_log al1_0 
     join
         person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:45:27.864+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-1] j.summer.service.impl.FaceServiceImpl    : Face register: jesper.summer.entity.FaceData@5cf31a53
-2025-07-19T16:45:27.888+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
-    insert 
-    into
-        face_data
-        (face_token, face_url, group_id, log_id, register_time, person_id) 
-    values
-        (?, ?, ?, ?, ?, ?)
-2025-07-19T16:45:46.246+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-3] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
+            on p1_0.id=al1_0.person_id 
     join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
         person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
+            on p1_0.id=d1_0.person_id 
     where
-        fd1_0.person_id=?
-2025-07-19T16:45:47.299+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-3] j.summer.config.BaiduFaceResultHandler   : {"result":true,"log_id":1646672127,"error_msg":"SUCCESS","cached":0,"error_code":0,"timestamp":1752914747}
-2025-07-19T16:45:47.318+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-3] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.face_token=?
-2025-07-19T16:45:47.324+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-3] org.hibernate.SQL                        : 
-    delete 
-    from
-        face_data 
-    where
-        person_id=?
-2025-07-19T16:46:12.519+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-4] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:46:12.526+08:00 ERROR 40160 --- [Summer] [http-nio-10123-exec-4] j.s.exception.GlobalExceptionHandler     : Unable to find jesper.summer.entity.FaceData with id 1
-2025-07-19T16:46:21.183+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-9] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:46:21.186+08:00 ERROR 40160 --- [Summer] [http-nio-10123-exec-9] j.s.exception.GlobalExceptionHandler     : Unable to find jesper.summer.entity.FaceData with id 2
-2025-07-19T16:46:40.245+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-6] org.hibernate.SQL                        : 
-    select
-        count(*) 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:46:42.604+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-6] j.summer.config.BaiduFaceResultHandler   : {"result":{"face_token":"15201b1c2fd53296d32d31c16bfd7d61","location":{"top":671.26,"left":303.13,"rotation":-7,"width":233,"height":240}},"log_id":815804180,"error_msg":"SUCCESS","cached":0,"error_code":0,"timestamp":1752914803}
-2025-07-19T16:46:42.605+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-6] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        p2_0.id,
-        p2_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f2_0.person_id,
-        f2_0.face_token,
-        f2_0.face_url,
-        f2_0.group_id,
-        f2_0.log_id,
-        p3_0.id,
-        p3_0.name,
-        f2_0.register_time,
-        p1_0.name 
-    from
-        person p1_0 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        person p2_0 
-            on p2_0.id=d1_0.person_id 
-    left join
-        face_data f2_0 
-            on f2_0.person_id=p1_0.id 
-    left join
-        person p3_0 
-            on p3_0.id=f2_0.person_id 
-    where
-        p1_0.id=?
-2025-07-19T16:46:42.606+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-6] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:46:42.607+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-6] j.summer.service.impl.FaceServiceImpl    : Face register: jesper.summer.entity.FaceData@7edc5e4f
-2025-07-19T16:46:42.608+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-6] org.hibernate.SQL                        : 
-    insert 
-    into
-        face_data
-        (face_token, face_url, group_id, log_id, register_time, person_id) 
-    values
-        (?, ?, ?, ?, ?, ?)
-2025-07-19T16:46:49.305+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-8] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:46:50.142+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-8] j.summer.config.BaiduFaceResultHandler   : {"result":true,"log_id":930966376,"error_msg":"SUCCESS","cached":0,"error_code":0,"timestamp":1752914810}
-2025-07-19T16:46:53.539+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-8] j.summer.config.BaiduFaceResultHandler   : {"result":{"face_token":"bbdb3931aa2e5d1955d648128dcd7fe9","location":{"top":1312.56,"left":251.17,"rotation":0,"width":988,"height":1019}},"log_id":3092390589,"error_msg":"SUCCESS","cached":0,"error_code":0,"timestamp":1752914813}
-2025-07-19T16:46:53.552+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-8] org.hibernate.SQL                        : 
-    update
-        face_data fd1_0 
-    set
-        face_token=?,
-        group_id=?,
-        log_id=?,
-        face_url=? 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:47:07.988+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-10] org.hibernate.SQL                        : 
-    select
-        p1_0.id 
-    from
-        person p1_0 
-    where
-        p1_0.name=?
-2025-07-19T16:47:07.993+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-10] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        p2_0.id,
-        p2_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f2_0.person_id,
-        f2_0.face_token,
-        f2_0.face_url,
-        f2_0.group_id,
-        f2_0.log_id,
-        p3_0.id,
-        p3_0.name,
-        f2_0.register_time,
-        p1_0.name 
-    from
-        person p1_0 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        person p2_0 
-            on p2_0.id=d1_0.person_id 
-    left join
-        face_data f2_0 
-            on f2_0.person_id=p1_0.id 
-    left join
-        person p3_0 
-            on p3_0.id=f2_0.person_id 
-    where
-        p1_0.id=?
-2025-07-19T16:47:08.002+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-10] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:47:20.104+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name 
-    from
-        person p1_0 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
-    order by
-        p1_0.id 
-    limit
-        ?
-2025-07-19T16:47:20.112+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-2] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:47:20.119+08:00  WARN 40160 --- [Summer] [http-nio-10123-exec-2] ration$PageModule$WarningLoggingModifier : Serializing PageImpl instances as-is is not supported, meaning that there is no guarantee about the stability of the resulting JSON structure!
-	For a stable JSON structure, please use Spring Data's PagedModel (globally via @EnableSpringDataWebSupport(pageSerializationMode = VIA_DTO))
-	or Spring HATEOAS and Spring Data's PagedResourcesAssembler as documented in https://docs.spring.io/spring-data/commons/reference/repositories/core-extensions.html#core.web.pageables.
-
-2025-07-19T16:48:01.567+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
-    select
-        pd1_0.person_id 
-    from
-        person_detail pd1_0 
-    where
-        pd1_0.id_card=? 
-    limit
-        ?
-2025-07-19T16:48:01.569+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
-    insert 
-    into
-        person
-        (name) 
-    values
-        (?)
-2025-07-19T16:48:01.579+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
-    insert 
-    into
-        person_detail
-        (gender, id_card, name, phone, position, register_time, status, update_time, person_id) 
-    values
-        (?, ?, ?, ?, ?, ?, ?, ?, ?)
-2025-07-19T16:48:12.816+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-3] org.hibernate.SQL                        : 
-    delete fd1_0 
-    from
-        face_data fd1_0 
-    join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    where
-        p1_0.name=?
-2025-07-19T16:48:12.820+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-3] org.hibernate.SQL                        : 
-    delete pd1_0 
-    from
-        person_detail pd1_0 
-    where
-        pd1_0.name=?
-2025-07-19T16:48:12.823+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-3] org.hibernate.SQL                        : 
-    delete p1_0 
-    from
-        person p1_0 
-    where
-        p1_0.name=?
-2025-07-19T16:48:23.257+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-4] org.hibernate.SQL                        : 
-    select
-        p1_0.id 
-    from
-        person p1_0 
-    where
-        p1_0.name=?
-2025-07-19T16:48:23.262+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-4] org.hibernate.SQL                        : 
-    update
-        person_detail pd1_0 
-    set
-        gender=coalesce(?, pd1_0.gender),
-        id_card=coalesce(?, pd1_0.id_card),
-        phone=coalesce(?, pd1_0.phone),
-        position=coalesce(?, pd1_0.position),
-        status=coalesce(?, pd1_0.status) 
-    where
-        pd1_0.person_id=?
-2025-07-19T16:48:23.267+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-4] org.hibernate.SQL                        : 
-    update
-        face_data fd1_0 
-    set
-        face_token=?,
-        group_id=?,
-        log_id=?,
-        face_url=? 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:48:23.272+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-4] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        p2_0.id,
-        p2_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f2_0.person_id,
-        f2_0.face_token,
-        f2_0.face_url,
-        f2_0.group_id,
-        f2_0.log_id,
-        p3_0.id,
-        p3_0.name,
-        f2_0.register_time,
-        p1_0.name 
-    from
-        person p1_0 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        person p2_0 
-            on p2_0.id=d1_0.person_id 
-    left join
-        face_data f2_0 
-            on f2_0.person_id=p1_0.id 
-    left join
-        person p3_0 
-            on p3_0.id=f2_0.person_id 
-    where
-        p1_0.id=?
-2025-07-19T16:48:23.275+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-4] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:48:28.376+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-7] org.hibernate.SQL                        : 
-    select
-        p1_0.id 
-    from
-        person p1_0 
-    where
-        p1_0.name=?
-2025-07-19T16:48:28.378+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-7] org.hibernate.SQL                        : 
-    select
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        p2_0.id,
-        p2_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f2_0.person_id,
-        f2_0.face_token,
-        f2_0.face_url,
-        f2_0.group_id,
-        f2_0.log_id,
-        p3_0.id,
-        p3_0.name,
-        f2_0.register_time,
-        p1_0.name 
-    from
-        person p1_0 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        person p2_0 
-            on p2_0.id=d1_0.person_id 
-    left join
-        face_data f2_0 
-            on f2_0.person_id=p1_0.id 
-    left join
-        person p3_0 
-            on p3_0.id=f2_0.person_id 
-    where
-        p1_0.id=?
-2025-07-19T16:48:28.381+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-7] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:50:20.781+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-6] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:50:20.794+08:00 ERROR 40160 --- [Summer] [http-nio-10123-exec-6] j.s.exception.GlobalExceptionHandler     : Unable to find jesper.summer.entity.FaceData with id 2
-2025-07-19T16:50:33.158+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-10] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:50:33.676+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-10] j.summer.config.BaiduFaceResultHandler   : {"result":null,"log_id":473251111,"error_msg":"group_id format error","cached":0,"error_code":222006,"timestamp":1752915034}
-2025-07-19T16:50:33.681+08:00 ERROR 40160 --- [Summer] [http-nio-10123-exec-10] j.s.exception.GlobalExceptionHandler     : 百度API错误 [222006]: group_id格式错误
-2025-07-19T16:50:51.756+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-1] org.hibernate.SQL                        : 
-    select
-        count(*) 
-    from
-        face_data fd1_0 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:50:51.759+08:00 ERROR 40160 --- [Summer] [http-nio-10123-exec-1] j.s.exception.GlobalExceptionHandler     : 该人员已注册过人脸
-2025-07-19T16:51:26.011+08:00 DEBUG 40160 --- [Summer] [http-nio-10123-exec-4] org.hibernate.SQL                        : 
-    select
-        fd1_0.person_id,
-        fd1_0.face_token,
-        fd1_0.face_url,
-        fd1_0.group_id,
-        fd1_0.log_id,
-        p1_0.id,
-        d1_0.person_id,
-        d1_0.gender,
-        d1_0.id_card,
-        d1_0.name,
-        d1_0.phone,
-        d1_0.position,
-        d1_0.register_time,
-        d1_0.status,
-        d1_0.update_time,
-        f1_0.person_id,
-        f1_0.face_token,
-        f1_0.face_url,
-        f1_0.group_id,
-        f1_0.log_id,
-        f1_0.register_time,
-        p1_0.name,
-        fd1_0.register_time 
-    from
-        face_data fd1_0 
-    join
-        person p1_0 
-            on p1_0.id=fd1_0.person_id 
-    left join
-        person_detail d1_0 
-            on d1_0.person_id=p1_0.id 
-    left join
-        face_data f1_0 
-            on f1_0.person_id=p1_0.id 
-    where
-        fd1_0.person_id=?
-2025-07-19T16:51:26.427+08:00  INFO 40160 --- [Summer] [http-nio-10123-exec-4] j.summer.config.BaiduFaceResultHandler   : {"result":null,"log_id":1913756492,"error_msg":"group_id format error","cached":0,"error_code":222006,"timestamp":1752915086}
-2025-07-19T16:51:26.429+08:00 ERROR 40160 --- [Summer] [http-nio-10123-exec-4] j.s.exception.GlobalExceptionHandler     : 百度API错误 [222006]: group_id格式错误
+        date(al1_0.access_time)=current_date 
+        and al1_0.result=1 
+    group by
+        d1_0.position
+2025-07-20T16:29:24.407+08:00  INFO 744 --- [Summer] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-20T16:29:24.448+08:00  INFO 744 --- [Summer] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-20T16:29:24.454+08:00  INFO 744 --- [Summer] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-20T16:29:24.456+08:00  INFO 744 --- [Summer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-20T16:29:24.464+08:00  INFO 744 --- [Summer] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
