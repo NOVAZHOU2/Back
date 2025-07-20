@@ -1,19 +1,16 @@
 package jesper.summer.controller;
 
-import jesper.summer.dto.AccessLogCreateDTO;
-import jesper.summer.dto.AccessLogDTO;
 import jesper.summer.entity.AccessLog;
 import jesper.summer.exception.BusinessException;
 import jesper.summer.service.AccessLogService;
+import jesper.summer.vo.DeviceAccessCountVO;
+import jesper.summer.vo.VisitorRatio;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -58,6 +55,25 @@ public class AccessLogController {
         String ans = service.delete(request.getLogId());
         return ResponseEntity.ok(ans);
     }
+
+
+    @GetMapping("/device/in")
+    public ResponseEntity<List<DeviceAccessCountVO>> getDeviceAccessCount(){
+        return ResponseEntity.ok(service.getDeviceAccessCount());
+    }
+
+    @GetMapping("/device/stop")
+    public ResponseEntity<List<DeviceAccessCountVO>> getDeviceAccessCount0(){
+        return ResponseEntity.ok(service.getDeviceAccessCountStop());
+    }
+
+    @GetMapping("/Person")
+    public ResponseEntity<List<VisitorRatio>> getPersonCount(){
+        return ResponseEntity.ok(service.getPersonCount());
+    }
+
+
+
     @Data
     public static class LogDeleteRequest {
         @NotNull(message = "日志ID不能为空")
@@ -68,4 +84,9 @@ public class AccessLogController {
         @NotNull(message = "logIds不能为空")
         private List<Long> logIds;
     }
+
+
+
+
+
 }

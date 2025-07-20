@@ -48,6 +48,7 @@ public class FaceRecognizeController {
     @PostMapping("/recognize")
     public ResponseEntity<?> recognizeFace(
             @RequestPart("file") MultipartFile file,
+            @RequestParam String faceUrl,
             @RequestParam String groupIdList) throws BaiduApiException, IOException {
 
         Person result = faceService.recognizeFace(

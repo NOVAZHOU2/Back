@@ -1,6 +1,8 @@
 package jesper.summer.repository;
 
 import jesper.summer.entity.AccessLog;
+import jesper.summer.vo.DeviceAccessCountVO;
+import jesper.summer.vo.VisitorRatio;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -15,4 +17,26 @@ public interface AccessLogRepository extends JpaRepository<AccessLog, Long> {
     // 主键类型为Long（假设access_log表有自增主键）
     @Query("SELECT log.logId FROM AccessLog log WHERE log.deviceId = :deviceId")
     List<Long> findByDeviceId(String deviceId);
+
+    @Query("SELECT new jesper.summer.vo.DeviceAccessCountVO(log.deviceId, COUNT(log)) " +
+            "FROM AccessLog log " +
+            "WHERE DATE(log.accessTime) = CURRENT_DATE AND log.result = 1 " +
+            "GROUP BY log.deviceId")
+    List<DeviceAccessCountVO> countTodayAccessByDevice1();
+
+    @Query("SELECT new jesper.summer.vo.DeviceAccessCountVO(log.deviceId, COUNT(log)) " +
+            "FROM AccessLog log " +
+            "WHERE DATE(log.accessTime) = CURRENT_DATE AND log.result = 0 " +
+            "GROUP BY log.deviceId")
+    List<DeviceAccessCountVO> countTodayAccessByDevice0();
+
+    @Query("SELECT " +
+            "  new jesper.summer.vo.VisitorRatio(pd.position,COUNT(al)) " +
+            "FROM AccessLog al " +
+            "JOIN al.person p " +
+            "JOIN p.detail pd " +
+            "WHERE DATE(al.accessTime) = CURRENT_DATE " +
+            "  AND al.result = 1 " +
+            "GROUP BY pd.position")  // 直接按position分组
+    List<VisitorRatio> countPerson();
 }

@@ -3,6 +3,8 @@ package jesper.summer.service.impl;
 import jesper.summer.entity.AccessLog;
 import jesper.summer.repository.AccessLogRepository;
 import jesper.summer.service.AccessLogService;
+import jesper.summer.vo.DeviceAccessCountVO;
+import jesper.summer.vo.VisitorRatio;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -43,5 +45,19 @@ public class AccessLogServiceImpl implements AccessLogService {
         }
         repository.deleteById(logId);
         return "删除成功";
+    }
+
+    @Override
+    public List<DeviceAccessCountVO> getDeviceAccessCount() {
+        return repository.countTodayAccessByDevice1();
+    }
+
+    public List<DeviceAccessCountVO> getDeviceAccessCountStop(){
+        return repository.countTodayAccessByDevice0();
+    }
+
+    @Override
+    public List<VisitorRatio> getPersonCount() {
+        return repository.countPerson();
     }
 }
