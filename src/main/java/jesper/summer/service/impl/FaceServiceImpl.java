@@ -55,7 +55,7 @@ public class FaceServiceImpl implements FaceService {
         // 构建数据库实体
 
         FaceData faceData = new FaceData();
-        faceData.setPerson(person);
+        faceData.setPersonId(personId);
         faceData.setFaceToken(faceToken);
         faceData.setGroupId(groupId);
         faceData.setLogId(logId);
@@ -64,9 +64,8 @@ public class FaceServiceImpl implements FaceService {
 
 
         // 存储到数据库
-        log.info("Face register: " + faceData);
+        log.info("Face register: " + faceData.getPersonId());
         faceDataMapper.save(faceData);
-
 
         return result;
     }

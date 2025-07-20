@@ -19,23 +19,21 @@ public class Person {
     private String name;
 
     // 正确关联PersonDetail（假设通过person_id外键）
-    @OneToOne
-    @JoinColumn(name = "id", referencedColumnName = "person_id")
+    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL)
     @JsonIgnore
     private PersonDetail detail; // 字段名必须与查询语句一致
 
-    @OneToOne
-    @JoinColumn(name = "id", referencedColumnName = "person_id")
+    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL)
     @JsonIgnore
-    private FaceData facedata; // 字段名必须与查询语句一致
+    private FaceData faceData; // 字段名必须与查询语句一致
     // Getters and Setters
 
     public FaceData getFacedata() {
-        return facedata;
+        return faceData;
     }
 
     public void setFacedata(FaceData facedata) {
-        this.facedata = facedata;
+        this.faceData = facedata;
     }
 
     public PersonDetail getDetail() {

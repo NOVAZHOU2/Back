@@ -31,8 +31,7 @@ public class FaceData {
     private Long logId;
 
     @OneToOne
-    @MapsId
-    @JoinColumn(name = "person_id")
+    @JoinColumn(name = "person_id", referencedColumnName = "id")
     @JsonIgnore
     private Person person;
 
