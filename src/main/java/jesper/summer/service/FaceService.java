@@ -1,6 +1,7 @@
 package jesper.summer.service;
 
 import jesper.summer.entity.Person;
+import jesper.summer.entity.PersonDetail;
 import jesper.summer.exception.BaiduApiException;
 import jesper.summer.exception.BusinessException;
 import org.json.JSONObject;
@@ -14,7 +15,7 @@ public interface FaceService {
 
     JSONObject updateFace(Long personId, MultipartFile file, String groupId, String faceUrl,String userInfo) throws BaiduApiException, IOException;
 
-    Person recognizeFace(MultipartFile file, String groupIdList) throws BaiduApiException, IOException;
+    PersonDetail recognizeFace(MultipartFile file, String groupIdList) throws BaiduApiException, IOException;
 
     JSONObject deleteFace(Long personId) throws BaiduApiException;
 }

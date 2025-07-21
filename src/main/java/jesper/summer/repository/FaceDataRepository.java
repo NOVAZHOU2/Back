@@ -36,4 +36,6 @@ public interface FaceDataRepository extends JpaRepository<FaceData, Long> {
     FaceData findByFaceToken(String faceToken);
     void deleteByFaceToken(String faceToken);
 
+    @Query("select fd From FaceData fd where fd.person.name =:name")
+    FaceData findByPersonName(String name);
 }

@@ -3,6 +3,7 @@ package jesper.summer.service;
 import jesper.summer.dto.PersonCreateDTO;
 import jesper.summer.dto.PersonResponseDTO;
 import jesper.summer.dto.PersonUpdateByNameDTO;
+import jesper.summer.exception.BaiduApiException;
 import jesper.summer.exception.BusinessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -14,7 +15,7 @@ public interface PersonService {
     @Transactional
     PersonResponseDTO createPerson(PersonCreateDTO dto) throws BusinessException;
 
-    void deleteByName(String name);
+    void deleteByName(String name) throws BaiduApiException;
 
 
     PersonResponseDTO updatePersonByName(PersonUpdateByNameDTO dto) throws BusinessException;
@@ -23,5 +24,5 @@ public interface PersonService {
 
     Page<PersonResponseDTO> getAllPersons(Pageable pageable);
 
-    int batchDeleteByName(List<String> names) throws BusinessException;
+    int batchDeleteByName(List<String> names) throws BusinessException, BaiduApiException;
 }

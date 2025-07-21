@@ -164,7 +164,7 @@ public class BaiduFaceResultHandler {
                     friendlyMsg
             );
         }
-
+        log.info("faceResult:"+result.toString());
         // 成功返回原始数据
         return result;
     }

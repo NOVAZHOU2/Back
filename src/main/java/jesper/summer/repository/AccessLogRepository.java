@@ -4,6 +4,7 @@ import jesper.summer.entity.AccessLog;
 import jesper.summer.vo.DeviceAccessCountVO;
 import jesper.summer.vo.VisitorRatio;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
@@ -48,4 +49,7 @@ public interface AccessLogRepository extends JpaRepository<AccessLog, Long> {
     @Query("SELECT a FROM AccessLog a WHERE HOUR(a.accessTime) >= 23 OR HOUR(a.accessTime) < 6")
     List<AccessLog> findNightTimeLogs();
 
+    @Modifying  // 必须添加
+    @Query("DELETE FROM AccessLog a WHERE a.person.name = :name")
+    int deleteByPersonName(@Param("name") String name);
 }

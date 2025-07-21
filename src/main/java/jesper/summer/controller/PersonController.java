@@ -62,7 +62,7 @@ public class PersonController {
                     "DELETE",
                     name,
                     HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                    "系统错误: 删除操作未完成",
+                    e.getMessage(),
                     LocalDateTime.now()
             );
             return ResponseEntity.internalServerError().body(response);

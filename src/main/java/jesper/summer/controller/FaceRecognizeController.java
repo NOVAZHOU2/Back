@@ -1,6 +1,7 @@
 package jesper.summer.controller;
 
 import jesper.summer.entity.Person;
+import jesper.summer.entity.PersonDetail;
 import jesper.summer.exception.BaiduApiException;
 import jesper.summer.exception.BusinessException;
 import jesper.summer.service.FaceService;
@@ -51,7 +52,7 @@ public class FaceRecognizeController {
             @RequestParam String faceUrl,
             @RequestParam String groupIdList) throws BaiduApiException, IOException {
 
-        Person result = faceService.recognizeFace(
+        PersonDetail result = faceService.recognizeFace(
                 file,
                 groupIdList
         );

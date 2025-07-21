@@ -1,16 +1,18 @@
 package jesper.summer.service.impl;
 
+import jesper.summer.config.BaiduFaceResultHandler;
 import jesper.summer.dto.PersonCreateDTO;
 import jesper.summer.dto.PersonResponseDTO;
 import jesper.summer.dto.PersonUpdateByNameDTO;
 import jesper.summer.entity.*;
+import jesper.summer.exception.BaiduApiException;
 import jesper.summer.exception.BusinessException;
 import jesper.summer.repository.*;
 import jesper.summer.service.PersonService;
+import jesper.summer.utils.FaceUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
@@ -25,17 +27,21 @@ public class PersonServiceImpl implements PersonService {
     private final PersonRepository personRepository;
     private final PersonDetailRepository personDetailRepository;
     private final FaceDataRepository faceDataRepository;
+    private final AccessLogRepository accessLogRepository;
+    private final FaceUtils faceUtils;
 
     public PersonServiceImpl(PersonRepository personRepository,
                              PersonDetailRepository personDetailRepository,
-                             FaceDataRepository faceDataRepository) {
+                             FaceDataRepository faceDataRepository, AccessLogRepository accessLogRepository, FaceUtils faceUtils) {
         this.personRepository = personRepository;
         this.personDetailRepository = personDetailRepository;
         this.faceDataRepository = faceDataRepository;
+        this.accessLogRepository = accessLogRepository;
+        this.faceUtils = faceUtils;
     }
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public int batchDeleteByName(List<String> names) throws BusinessException {
+    public int batchDeleteByName(List<String> names) throws BusinessException, BaiduApiException {
         if (CollectionUtils.isEmpty(names)) {
             throw new BusinessException("姓名列表不能为空");
         }
@@ -43,6 +49,9 @@ public class PersonServiceImpl implements PersonService {
         int totalDeleted = 0;
         for (String name : names) {
             // 1. 查询主表ID（避免重复查询）
+            FaceData faceData = faceDataRepository.findByPersonName(name);
+            BaiduFaceResultHandler.handleResult(faceUtils.deleteFace(String.valueOf(faceData.getPersonId()),faceData.getGroupId(),faceData.getFaceToken()));
+            accessLogRepository.deleteByPersonName(name);
             faceDataRepository.deleteFaceDataByName(name);
             personDetailRepository.deleteDetailByName(name);
 
@@ -72,8 +81,6 @@ public class PersonServiceImpl implements PersonService {
         detail.setUpdateTime(LocalDateTime.now());
         personDetailRepository.save(detail);
 
-
-
         // 返回结果
         PersonResponseDTO response = new PersonResponseDTO();
         BeanUtils.copyProperties(detail, response);
@@ -93,8 +100,11 @@ public class PersonServiceImpl implements PersonService {
     }
     @Override
     @Transactional
-    public void deleteByName(String name) {
+    public void deleteByName(String name) throws BaiduApiException {
         // 先删除关联数据
+        FaceData faceData = faceDataRepository.findByPersonName(name);
+        BaiduFaceResultHandler.handleResult(faceUtils.deleteFace(String.valueOf(faceData.getPersonId()),faceData.getGroupId(),faceData.getFaceToken()));
+        accessLogRepository.deleteByPersonName(name);
         faceDataRepository.deleteFaceDataByName(name);
         personDetailRepository.deleteDetailByName(name);
 

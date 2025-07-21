@@ -1,7 +1,6 @@
 package jesper.summer.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jesper.summer.entity.Person;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;

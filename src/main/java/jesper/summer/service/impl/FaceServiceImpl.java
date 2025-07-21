@@ -5,9 +5,11 @@ import jakarta.transaction.Transactional;
 import jesper.summer.config.BaiduFaceResultHandler;
 import jesper.summer.entity.FaceData;
 import jesper.summer.entity.Person;
+import jesper.summer.entity.PersonDetail;
 import jesper.summer.exception.BaiduApiException;
 import jesper.summer.exception.BusinessException;
 import jesper.summer.repository.FaceDataRepository;
+import jesper.summer.repository.PersonDetailRepository;
 import jesper.summer.repository.PersonRepository;
 import jesper.summer.service.FaceService;
 import jesper.summer.utils.FaceUtils;
@@ -28,12 +30,14 @@ public class FaceServiceImpl implements FaceService {
     private final FaceUtils faceUtils;
     private final FaceDataRepository faceDataMapper;
     private final PersonRepository personMapper;
+    private final PersonDetailRepository personDetailMapper;
 
     @Autowired
-    public FaceServiceImpl(FaceUtils faceUtils, FaceDataRepository faceDataMapper, PersonRepository personMapper) {
+    public FaceServiceImpl(FaceUtils faceUtils, FaceDataRepository faceDataMapper, PersonRepository personMapper, PersonDetailRepository personDetailMapper) {
         this.faceUtils = faceUtils;
         this.faceDataMapper = faceDataMapper;
         this.personMapper = personMapper;
+        this.personDetailMapper = personDetailMapper;
     }
 
     // 人脸注册（含数据库记录）
@@ -71,7 +75,7 @@ public class FaceServiceImpl implements FaceService {
     }
 
     // 人脸识别（1:N搜索）
-    public Person recognizeFace(MultipartFile file, String groupIdList) throws BaiduApiException, IOException {
+    public PersonDetail recognizeFace(MultipartFile file, String groupIdList) throws BaiduApiException, IOException {
         String imageBase64 = Base64.getEncoder().encodeToString(file.getBytes());
         JSONObject result = BaiduFaceResultHandler.handleResult(faceUtils.recognizeFace(imageBase64, groupIdList));
         JSONObject resultObj = result.getJSONObject("result");
@@ -93,7 +97,7 @@ public class FaceServiceImpl implements FaceService {
         }
 
         log.info("Face recognize: " + userId);
-        return personMapper.getPersonById(userId);
+        return personDetailMapper.getPersonDetailByPersonId(userId);
     }
 
     // 人脸删除（含数据库清理）

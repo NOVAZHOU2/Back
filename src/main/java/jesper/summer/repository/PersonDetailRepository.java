@@ -1,5 +1,6 @@
 package jesper.summer.repository;
 
+import jesper.summer.entity.Person;
 import jesper.summer.entity.PersonDetail;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -36,4 +37,7 @@ public interface PersonDetailRepository extends JpaRepository<PersonDetail, Long
     );
     @EntityGraph(attributePaths = {"person"})
     Optional<PersonDetail> findByPersonId(Long personId);
+
+    @Query("select p From PersonDetail p where p.personId =:userId ")
+    PersonDetail getPersonDetailByPersonId(Long userId);
 }
