@@ -63,6 +63,10 @@ public class AccessDeviceServiceImpl implements AccessDeviceService {
 
     @Override
     public void delete(String deviceId) {
+        List<Long> logs = logRepository.findByDeviceId(deviceId);
+        for(Long log :logs){
+            logService.delete(log);
+        }
         repository.deleteById(deviceId);
     }
 }
